@@ -16,5 +16,10 @@ namespace Proyecto_Poe
         {
             InitializeComponent();
         }
+
+        private void Frm_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
