@@ -30,12 +30,12 @@ namespace Proyecto_Poe
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TxtCi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.BtSingIn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtPassword = new System.Windows.Forms.TextBox();
-            this.BtSingIn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtCi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,37 +57,21 @@ namespace Proyecto_Poe
             this.panel1.Size = new System.Drawing.Size(535, 350);
             this.panel1.TabIndex = 0;
             // 
-            // TxtCi
+            // BtSingIn
             // 
-            this.TxtCi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtCi.BackColor = System.Drawing.Color.LightGray;
-            this.TxtCi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtCi.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCi.Location = new System.Drawing.Point(139, 135);
-            this.TxtCi.Name = "TxtCi";
-            this.TxtCi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtCi.Size = new System.Drawing.Size(274, 26);
-            this.TxtCi.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(175, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Iniciar Sesion";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(134, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 26);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Usuario";
+            this.BtSingIn.BackColor = System.Drawing.Color.Blue;
+            this.BtSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtSingIn.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtSingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtSingIn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtSingIn.ForeColor = System.Drawing.Color.White;
+            this.BtSingIn.Location = new System.Drawing.Point(139, 287);
+            this.BtSingIn.Name = "BtSingIn";
+            this.BtSingIn.Size = new System.Drawing.Size(274, 41);
+            this.BtSingIn.TabIndex = 6;
+            this.BtSingIn.Text = "Iniciar Sesion";
+            this.BtSingIn.UseVisualStyleBackColor = false;
+            this.BtSingIn.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -112,21 +96,37 @@ namespace Proyecto_Poe
             this.TxtPassword.Size = new System.Drawing.Size(274, 26);
             this.TxtPassword.TabIndex = 3;
             // 
-            // BtSingIn
+            // label2
             // 
-            this.BtSingIn.BackColor = System.Drawing.Color.Blue;
-            this.BtSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtSingIn.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtSingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtSingIn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtSingIn.ForeColor = System.Drawing.Color.White;
-            this.BtSingIn.Location = new System.Drawing.Point(139, 287);
-            this.BtSingIn.Name = "BtSingIn";
-            this.BtSingIn.Size = new System.Drawing.Size(274, 41);
-            this.BtSingIn.TabIndex = 6;
-            this.BtSingIn.Text = "Iniciar Sesion";
-            this.BtSingIn.UseVisualStyleBackColor = false;
-            this.BtSingIn.Click += new System.EventHandler(this.button2_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(134, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 26);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Usuario";
+            // 
+            // TxtCi
+            // 
+            this.TxtCi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtCi.BackColor = System.Drawing.Color.LightGray;
+            this.TxtCi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCi.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCi.Location = new System.Drawing.Point(139, 135);
+            this.TxtCi.Name = "TxtCi";
+            this.TxtCi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtCi.Size = new System.Drawing.Size(274, 26);
+            this.TxtCi.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(175, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Iniciar Sesion";
             // 
             // Form1
             // 
