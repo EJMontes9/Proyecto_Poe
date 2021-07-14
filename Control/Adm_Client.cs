@@ -10,8 +10,6 @@ namespace Control
     public class Adm_Client
     {
         List<Client> LisClient = new List<Client>();
-        private static Client cli = null;
-
         public Adm_Client()
         {
             Client a = new Client("0987654321","a","a","0999999999","email", "city ", "direction", "1111");
