@@ -19,6 +19,6 @@ namespace Model
             this.password = password;
         }
 
-        public string Contraseña { get => password; set => password = value; }
+        public string Password { get => password; set => password = value; }
     }
 }

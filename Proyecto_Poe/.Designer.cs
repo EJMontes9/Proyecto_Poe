@@ -30,12 +30,12 @@ namespace Proyecto_Poe
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtCi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.BtSingIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,28 +46,28 @@ namespace Proyecto_Poe
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtSingIn);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.TxtPassword);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TxtCi);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(28, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(535, 350);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // TxtCi
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(139, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(274, 26);
-            this.textBox1.TabIndex = 1;
+            this.TxtCi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtCi.BackColor = System.Drawing.Color.LightGray;
+            this.TxtCi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCi.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCi.Location = new System.Drawing.Point(139, 135);
+            this.TxtCi.Name = "TxtCi";
+            this.TxtCi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtCi.Size = new System.Drawing.Size(274, 26);
+            this.TxtCi.TabIndex = 1;
             // 
             // label1
             // 
@@ -99,33 +99,34 @@ namespace Proyecto_Poe
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña";
             // 
-            // textBox2
+            // TxtPassword
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.LightGray;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(139, 225);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '•';
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(274, 26);
-            this.textBox2.TabIndex = 3;
+            this.TxtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtPassword.BackColor = System.Drawing.Color.LightGray;
+            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPassword.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(139, 225);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '•';
+            this.TxtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtPassword.Size = new System.Drawing.Size(274, 26);
+            this.TxtPassword.TabIndex = 3;
             // 
-            // button2
+            // BtSingIn
             // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(139, 287);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(274, 41);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Iniciar Sesion";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtSingIn.BackColor = System.Drawing.Color.Blue;
+            this.BtSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtSingIn.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtSingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtSingIn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtSingIn.ForeColor = System.Drawing.Color.White;
+            this.BtSingIn.Location = new System.Drawing.Point(139, 287);
+            this.BtSingIn.Name = "BtSingIn";
+            this.BtSingIn.Size = new System.Drawing.Size(274, 41);
+            this.BtSingIn.TabIndex = 6;
+            this.BtSingIn.Text = "Iniciar Sesion";
+            this.BtSingIn.UseVisualStyleBackColor = false;
+            this.BtSingIn.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -147,10 +148,10 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtCi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.Button BtSingIn;
     }
 }
 
