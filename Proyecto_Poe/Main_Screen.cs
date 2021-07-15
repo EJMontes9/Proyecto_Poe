@@ -27,7 +27,10 @@ namespace Proyecto_Poe
 
             if (amd.IniciarSesion(cedula, contraseña))
             {
-                MessageBox.Show("Se inicio sesion", "Inicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Se inicio sesion", "Inicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Visible = false;
+                Frm_Client frm = new Frm_Client();
+                frm.Show();
             }
             else
             {

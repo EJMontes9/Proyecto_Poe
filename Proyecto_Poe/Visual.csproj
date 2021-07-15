@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_Cliente.cs">
+    <Compile Include="Frm_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Cliente.Designer.cs">
-      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    <Compile Include="Frm_Client.Designer.cs">
+      <DependentUpon>Frm_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Menu.Designer.cs">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Screen.cs">
       <SubType>Form</SubType>
@@ -61,8 +67,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Cliente.resx">
-      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Client.resx">
+      <DependentUpon>Frm_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Menu.resx">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Screen.resx">
       <DependentUpon>Main_Screen.cs</DependentUpon>

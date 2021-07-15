@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poe
 {
-    public partial class Frm_Cliente : Form
+    public partial class Frm_Client : Form
     {
-        public Frm_Cliente()
+        public Frm_Client()
         {
             InitializeComponent();
         }
