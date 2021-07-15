@@ -34,7 +34,7 @@ namespace Proyecto_Poe
             }
             else
             {
-                MessageBox.Show("Datos erronios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Datos Incorrectos, Intente Nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
