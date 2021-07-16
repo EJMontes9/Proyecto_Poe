@@ -16,5 +16,17 @@ namespace Proyecto_Poe
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Frm_Menu frm = new Frm_Menu();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frm_Order frm = new Frm_Order();
+            frm.Show();
+        }
     }
 }

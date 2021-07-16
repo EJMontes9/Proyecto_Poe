@@ -33,10 +33,10 @@ namespace Proyecto_Poe
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@ namespace Proyecto_Poe
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 65);
             this.button1.TabIndex = 0;
-            this.button1.Text = "________";
+            this.button1.Text = "Registros";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
@@ -82,35 +82,15 @@ namespace Proyecto_Poe
             this.panel1.Size = new System.Drawing.Size(605, 456);
             this.panel1.TabIndex = 2;
             // 
-            // button2
+            // label1
             // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(386, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 65);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Horarios Atencion";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Blue;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(99, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 65);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Menu";
-            this.button3.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(220, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Restaurante Nombre";
             // 
             // button4
             // 
@@ -124,18 +104,40 @@ namespace Proyecto_Poe
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(136, 65);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Reserva";
+            this.button4.Text = "Reservas";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // button3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(220, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 26);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Restaurante Nombre";
+            this.button3.BackColor = System.Drawing.Color.Blue;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(99, 204);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 65);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Control Menu";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Blue;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(386, 204);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 65);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Ordenes";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Frm_Client
             // 

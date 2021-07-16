@@ -43,10 +43,26 @@ namespace Proyecto_Poe
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.MYC_True = new System.Windows.Forms.RadioButton();
+            this.MYC_False = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.SDP_True = new System.Windows.Forms.RadioButton();
+            this.SDP_False = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.PYC_True = new System.Windows.Forms.RadioButton();
+            this.PYC_False = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ENC_True = new System.Windows.Forms.RadioButton();
+            this.ENC_False = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -189,12 +205,160 @@ namespace Proyecto_Poe
             this.label9.TabIndex = 14;
             this.label9.Text = "$ 2.50";
             // 
-            // Frm_Cliente
+            // MYC_True
+            // 
+            this.MYC_True.AutoSize = true;
+            this.MYC_True.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MYC_True.Location = new System.Drawing.Point(3, 6);
+            this.MYC_True.Name = "MYC_True";
+            this.MYC_True.Size = new System.Drawing.Size(87, 23);
+            this.MYC_True.TabIndex = 15;
+            this.MYC_True.TabStop = true;
+            this.MYC_True.Text = "Existente";
+            this.MYC_True.UseVisualStyleBackColor = true;
+            // 
+            // MYC_False
+            // 
+            this.MYC_False.AutoSize = true;
+            this.MYC_False.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MYC_False.Location = new System.Drawing.Point(96, 6);
+            this.MYC_False.Name = "MYC_False";
+            this.MYC_False.Size = new System.Drawing.Size(109, 23);
+            this.MYC_False.TabIndex = 16;
+            this.MYC_False.TabStop = true;
+            this.MYC_False.Text = "No existente";
+            this.MYC_False.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.MYC_True);
+            this.panel1.Controls.Add(this.MYC_False);
+            this.panel1.Location = new System.Drawing.Point(162, 127);
+            this.panel1.Name = "panel1";
+            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.panel1.Size = new System.Drawing.Size(226, 32);
+            this.panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Controls.Add(this.SDP_True);
+            this.panel2.Controls.Add(this.SDP_False);
+            this.panel2.Location = new System.Drawing.Point(165, 234);
+            this.panel2.Name = "panel2";
+            this.panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.panel2.Size = new System.Drawing.Size(226, 32);
+            this.panel2.TabIndex = 18;
+            // 
+            // SDP_True
+            // 
+            this.SDP_True.AutoSize = true;
+            this.SDP_True.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SDP_True.Location = new System.Drawing.Point(3, 6);
+            this.SDP_True.Name = "SDP_True";
+            this.SDP_True.Size = new System.Drawing.Size(87, 23);
+            this.SDP_True.TabIndex = 15;
+            this.SDP_True.TabStop = true;
+            this.SDP_True.Text = "Existente";
+            this.SDP_True.UseVisualStyleBackColor = true;
+            // 
+            // SDP_False
+            // 
+            this.SDP_False.AutoSize = true;
+            this.SDP_False.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SDP_False.Location = new System.Drawing.Point(96, 6);
+            this.SDP_False.Name = "SDP_False";
+            this.SDP_False.Size = new System.Drawing.Size(109, 23);
+            this.SDP_False.TabIndex = 16;
+            this.SDP_False.TabStop = true;
+            this.SDP_False.Text = "No existente";
+            this.SDP_False.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.Controls.Add(this.PYC_True);
+            this.panel3.Controls.Add(this.PYC_False);
+            this.panel3.Location = new System.Drawing.Point(611, 127);
+            this.panel3.Name = "panel3";
+            this.panel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.panel3.Size = new System.Drawing.Size(226, 32);
+            this.panel3.TabIndex = 18;
+            // 
+            // PYC_True
+            // 
+            this.PYC_True.AutoSize = true;
+            this.PYC_True.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PYC_True.Location = new System.Drawing.Point(3, 6);
+            this.PYC_True.Name = "PYC_True";
+            this.PYC_True.Size = new System.Drawing.Size(87, 23);
+            this.PYC_True.TabIndex = 15;
+            this.PYC_True.TabStop = true;
+            this.PYC_True.Text = "Existente";
+            this.PYC_True.UseVisualStyleBackColor = true;
+            // 
+            // PYC_False
+            // 
+            this.PYC_False.AutoSize = true;
+            this.PYC_False.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PYC_False.Location = new System.Drawing.Point(96, 6);
+            this.PYC_False.Name = "PYC_False";
+            this.PYC_False.Size = new System.Drawing.Size(109, 23);
+            this.PYC_False.TabIndex = 16;
+            this.PYC_False.TabStop = true;
+            this.PYC_False.Text = "No existente";
+            this.PYC_False.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel4.Controls.Add(this.ENC_True);
+            this.panel4.Controls.Add(this.ENC_False);
+            this.panel4.Location = new System.Drawing.Point(611, 234);
+            this.panel4.Name = "panel4";
+            this.panel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.panel4.Size = new System.Drawing.Size(226, 32);
+            this.panel4.TabIndex = 18;
+            // 
+            // ENC_True
+            // 
+            this.ENC_True.AutoSize = true;
+            this.ENC_True.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ENC_True.Location = new System.Drawing.Point(3, 6);
+            this.ENC_True.Name = "ENC_True";
+            this.ENC_True.Size = new System.Drawing.Size(87, 23);
+            this.ENC_True.TabIndex = 15;
+            this.ENC_True.TabStop = true;
+            this.ENC_True.Text = "Existente";
+            this.ENC_True.UseVisualStyleBackColor = true;
+            // 
+            // ENC_False
+            // 
+            this.ENC_False.AutoSize = true;
+            this.ENC_False.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ENC_False.Location = new System.Drawing.Point(96, 6);
+            this.ENC_False.Name = "ENC_False";
+            this.ENC_False.Size = new System.Drawing.Size(109, 23);
+            this.ENC_False.TabIndex = 16;
+            this.ENC_False.TabStop = true;
+            this.ENC_False.Text = "No existente";
+            this.ENC_False.UseVisualStyleBackColor = true;
+            // 
+            // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(856, 295);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -208,12 +372,20 @@ namespace Proyecto_Poe
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Frm_Cliente";
+            this.Name = "Frm_Menu";
             this.Text = "Restaurante Nombre";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +406,17 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RadioButton MYC_True;
+        private System.Windows.Forms.RadioButton MYC_False;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton SDP_True;
+        private System.Windows.Forms.RadioButton SDP_False;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton PYC_True;
+        private System.Windows.Forms.RadioButton PYC_False;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.RadioButton ENC_True;
+        private System.Windows.Forms.RadioButton ENC_False;
     }
 }

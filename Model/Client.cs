@@ -10,6 +10,7 @@ namespace Model
     {
         private string password;
 
+
         public Client()
         {
         }
