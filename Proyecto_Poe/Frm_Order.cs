@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poe
 {
-    public partial class BtDelete : Form
+    public partial class Frm_Order : Form
     {
         Adm_Food amdfood = new Adm_Food();
         double TotPay = 0.00;
         int i;
-        public BtDelete()
+        public Frm_Order()
         {
             InitializeComponent();
         }
@@ -52,7 +52,6 @@ namespace Proyecto_Poe
         private void button1_Click_1(object sender, EventArgs e)
         {
             DgOrder.Rows.RemoveAt(i);
-            
         }
     }
 }

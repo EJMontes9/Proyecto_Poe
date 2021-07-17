@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_Poe
 {
-    partial class BtDelete
+    partial class Frm_Order
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@ namespace Proyecto_Poe
             this.LaTot = new System.Windows.Forms.Label();
             this.BTAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgOrder)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -171,7 +171,7 @@ namespace Proyecto_Poe
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtDelete);
             this.panel1.Controls.Add(this.LaTot);
             this.panel1.Controls.Add(this.BTAdd);
             this.panel1.Controls.Add(this.label4);
@@ -186,29 +186,29 @@ namespace Proyecto_Poe
             this.panel1.Size = new System.Drawing.Size(672, 450);
             this.panel1.TabIndex = 10;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(62, 386);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 27);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // BtDelete
+            // 
+            this.BtDelete.BackColor = System.Drawing.Color.Blue;
+            this.BtDelete.FlatAppearance.BorderSize = 0;
+            this.BtDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtDelete.ForeColor = System.Drawing.Color.White;
+            this.BtDelete.Location = new System.Drawing.Point(62, 386);
+            this.BtDelete.Name = "BtDelete";
+            this.BtDelete.Size = new System.Drawing.Size(104, 27);
+            this.BtDelete.TabIndex = 10;
+            this.BtDelete.Text = "Eliminar";
+            this.BtDelete.UseVisualStyleBackColor = false;
+            this.BtDelete.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Frm_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "BtDelete";
+            this.Name = "Frm_Order";
             this.Text = "EJM";
             ((System.ComponentModel.ISupportInitialize)(this.DgOrder)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -234,6 +234,6 @@ namespace Proyecto_Poe
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioTot;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtDelete;
     }
 }
