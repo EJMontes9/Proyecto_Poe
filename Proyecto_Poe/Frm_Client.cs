@@ -25,7 +25,7 @@ namespace Proyecto_Poe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Frm_Order frm = new Frm_Order();
+            BtDelete frm = new BtDelete();
             frm.Show();
         }
     }

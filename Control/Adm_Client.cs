@@ -9,16 +9,16 @@ namespace Control
 {
     public class Adm_Client
     {
-        List<Client> LisClient = new List<Client>();
+        List<Client> lisClient = new List<Client>();
         public Adm_Client()
         {
             Client a = new Client("0987654321","a","a","0999999999","email", "city ", "direction", "1111");
-            LisClient.Add(a);
+            lisClient.Add(a);
         }
 
         public Boolean IniciarSesion(String ci, String password)
         {
-            foreach (var a in LisClient)
+            foreach (var a in lisClient)
             {
                 if (a.Ci == ci)
                 {
