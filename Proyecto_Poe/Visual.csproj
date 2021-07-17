@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsValidations.cs" />
-    <Compile Include="Frm_Client.cs">
+    <Compile Include="Frm_MenuOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Client.Designer.cs">
-      <DependentUpon>Frm_Client.cs</DependentUpon>
+    <Compile Include="Frm_MenuOpciones.Designer.cs">
+      <DependentUpon>Frm_MenuOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
@@ -65,17 +65,17 @@
     <Compile Include="Frm_Order.Designer.cs">
       <DependentUpon>Frm_Order.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_Screen.cs">
+    <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>Main_Screen.cs</DependentUpon>
+      <DependentUpon>frm_Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Client.resx">
-      <DependentUpon>Frm_Client.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_MenuOpciones.resx">
+      <DependentUpon>Frm_MenuOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
@@ -83,8 +83,8 @@
     <EmbeddedResource Include="Frm_Order.resx">
       <DependentUpon>Frm_Order.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Screen.resx">
-      <DependentUpon>Main_Screen.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
