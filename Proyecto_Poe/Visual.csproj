@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsValidations.cs" />
-    <Compile Include="Frm_Client.cs">
+    <Compile Include="Frm_MenuOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Client.Designer.cs">
-      <DependentUpon>Frm_Client.cs</DependentUpon>
+    <Compile Include="Frm_MenuOpciones.Designer.cs">
+      <DependentUpon>Frm_MenuOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
@@ -74,8 +74,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Client.resx">
-      <DependentUpon>Frm_Client.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_MenuOpciones.resx">
+      <DependentUpon>Frm_MenuOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>

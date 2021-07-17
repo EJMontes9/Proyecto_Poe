@@ -29,20 +29,22 @@ namespace Proyecto_Poe
             {
                 //MessageBox.Show("Se inicio sesion", "Inicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Visible = false;
-                Frm_Client frm = new Frm_Client();
+                Frm_MenuOpciones frm = new Frm_MenuOpciones();
                 frm.Show();
             }
             else
             {
                 MessageBox.Show("Datos Incorrectos, Intente Nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            TxtCi.Text = "";
+            TxtPassword.Text = "";
         }
 
         private void TxtCi_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             ClsValidations clsValidations = new ClsValidations();
-
             clsValidations.Only_Numbers(sender, e);
 
         }
