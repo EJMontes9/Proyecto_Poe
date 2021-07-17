@@ -79,8 +79,7 @@ namespace Proyecto_Poe
             this.TxtCi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TxtCi.Size = new System.Drawing.Size(274, 33);
             this.TxtCi.TabIndex = 1;
-            this.TxtCi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCi_KeyPress);
-            // 
+            //
             // label2
             // 
             this.label2.AutoSize = true;
