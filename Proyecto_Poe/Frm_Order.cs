@@ -51,6 +51,9 @@ namespace Proyecto_Poe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            double ndelete = Convert.ToDouble(DgOrder.CurrentRow.Cells[4].Value.ToString());
+            TotPay = TotPay - ndelete;
+            LaTot.Text = TotPay.ToString("0.00");
             DgOrder.Rows.RemoveAt(i);
         }
     }

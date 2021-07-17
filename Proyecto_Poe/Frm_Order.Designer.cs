@@ -95,6 +95,8 @@ namespace Proyecto_Poe
             // 
             // DgOrder
             // 
+            this.DgOrder.AllowUserToAddRows = false;
+            this.DgOrder.AllowUserToDeleteRows = false;
             this.DgOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cod,
@@ -104,6 +106,8 @@ namespace Proyecto_Poe
             this.DG_PrecioTot});
             this.DgOrder.Location = new System.Drawing.Point(59, 130);
             this.DgOrder.Name = "DgOrder";
+            this.DgOrder.ReadOnly = true;
+            this.DgOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgOrder.Size = new System.Drawing.Size(569, 225);
             this.DgOrder.TabIndex = 5;
             this.DgOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgOrder_CellClick);
@@ -112,26 +116,31 @@ namespace Proyecto_Poe
             // 
             this.cod.HeaderText = "Codigo";
             this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
             // 
             // DG_Plato
             // 
             this.DG_Plato.HeaderText = "Plato";
             this.DG_Plato.Name = "DG_Plato";
+            this.DG_Plato.ReadOnly = true;
             // 
             // DG_Cantidad
             // 
             this.DG_Cantidad.HeaderText = "Cantidad";
             this.DG_Cantidad.Name = "DG_Cantidad";
+            this.DG_Cantidad.ReadOnly = true;
             // 
             // DG_PrecioUnitario
             // 
             this.DG_PrecioUnitario.HeaderText = "Precio Unitario";
             this.DG_PrecioUnitario.Name = "DG_PrecioUnitario";
+            this.DG_PrecioUnitario.ReadOnly = true;
             // 
             // DG_PrecioTot
             // 
             this.DG_PrecioTot.HeaderText = "Precio Total";
             this.DG_PrecioTot.Name = "DG_PrecioTot";
+            this.DG_PrecioTot.ReadOnly = true;
             // 
             // label4
             // 
