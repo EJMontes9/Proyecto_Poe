@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Adm_Client.cs" />
     <Compile Include="Adm_Food.cs" />
-    <Compile Include="Adm_Orden.cs" />
+    <Compile Include="Adm_Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
