@@ -26,7 +26,7 @@ namespace Proyecto_Poe
         private void button1_Click(object sender, EventArgs e)
         {
             int code = Int32.Parse(TxtCod.Text);
-            int amount = Int32.Parse(TxtAmount.Text);
+            int amount = Int32.Parse(TxtAmount.Text); 
             double Price = amdfood.Price(code);
             double Tot = Price * amount;
             if (amdfood.NameFood(code) == "Comida no encontrada")
