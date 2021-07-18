@@ -76,18 +76,12 @@ namespace Proyecto_Poe
             this.BtSingIn.UseVisualStyleBackColor = false;
             this.BtSingIn.Click += new System.EventHandler(this.button2_Click);
             // 
-            this.TxtCi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtCi.BackColor = System.Drawing.Color.LightGray;
-            this.TxtCi.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCi.Location = new System.Drawing.Point(139, 129);
-            this.TxtCi.MaxLength = 10;
-            this.TxtCi.Name = "TxtCi";
-            this.TxtCi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtCi.Size = new System.Drawing.Size(274, 33);
-            this.TxtCi.TabIndex = 1;
-            this.TxtCi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCi_KeyPress);
+            // label3
             // 
-            // label2
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 7;
             // 
             // TxtPassword
             // 

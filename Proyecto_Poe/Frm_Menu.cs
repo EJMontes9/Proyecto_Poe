@@ -16,5 +16,13 @@ namespace Proyecto_Poe
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Regresar al menu
+            this.Close();
+            Frm_MenuOpciones frmOpciones = new Frm_MenuOpciones();
+            frmOpciones.Show();
+        }
     }
 }

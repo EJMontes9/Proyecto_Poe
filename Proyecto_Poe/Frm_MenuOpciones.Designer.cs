@@ -46,13 +46,12 @@ namespace Proyecto_Poe
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(87, 368);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(106, 366);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 65);
             this.button1.TabIndex = 0;
@@ -78,16 +77,19 @@ namespace Proyecto_Poe
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.btnRegresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegresar.BackgroundImage")));
             this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegresar.FlatAppearance.BorderSize = 0;
-            this.btnRegresar.Location = new System.Drawing.Point(15, 16);
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegresar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegresar.Location = new System.Drawing.Point(15, 8);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(65, 65);
+            this.btnRegresar.Size = new System.Drawing.Size(103, 67);
             this.btnRegresar.TabIndex = 7;
-            this.btnRegresar.Text = " ";
+            this.btnRegresar.Text = " Cerrar Sesión";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
@@ -128,33 +130,31 @@ namespace Proyecto_Poe
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Blue;
+            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(460, 351);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(424, 366);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(136, 65);
             this.button4.TabIndex = 4;
             this.button4.Text = "Reservas";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(43, 280);
+            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(106, 281);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 82);
+            this.button3.Size = new System.Drawing.Size(136, 65);
             this.button3.TabIndex = 3;
             this.button3.Text = "Control Menu";
             this.button3.UseVisualStyleBackColor = false;
@@ -162,13 +162,12 @@ namespace Proyecto_Poe
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
+            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(460, 266);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(424, 281);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 65);
             this.button2.TabIndex = 2;

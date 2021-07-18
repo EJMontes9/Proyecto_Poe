@@ -19,6 +19,7 @@ namespace Proyecto_Poe
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Frm_Menu frm = new Frm_Menu();
             frm.Show();
         }
@@ -34,6 +35,11 @@ namespace Proyecto_Poe
             this.Close();
             Form1 frmLogin = new Form1();
             frmLogin.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
