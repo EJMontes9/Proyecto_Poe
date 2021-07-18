@@ -26,6 +26,7 @@ namespace Proyecto_Poe
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Frm_Order frm = new Frm_Order();
             frm.Show();
         }
@@ -40,6 +41,13 @@ namespace Proyecto_Poe
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Frm_Registro frm_Reg = new Frm_Registro();
+            frm_Reg.Show();
         }
     }
 }

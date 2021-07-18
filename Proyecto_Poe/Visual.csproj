@@ -72,6 +72,18 @@
       <DependentUpon>frm_Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Registro.Designer.cs">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Reserva.Designer.cs">
+      <DependentUpon>Frm_Reserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_MenuOpciones.resx">
@@ -85,6 +97,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Registro.resx">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Reserva.resx">
+      <DependentUpon>Frm_Reserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

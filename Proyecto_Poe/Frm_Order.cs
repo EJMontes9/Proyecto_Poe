@@ -16,6 +16,7 @@ namespace Proyecto_Poe
         Adm_Order amdorder = new Adm_Order();
         Adm_Food amdfood = new Adm_Food();
         Adm_Client admclient = new Adm_Client();
+        ClsValidations validar = new ClsValidations();
         double TotPay = 0.00;
         int i;
         public Frm_Order()
@@ -66,9 +67,42 @@ namespace Proyecto_Poe
                 string  comorder= "-"+DgOrder.Rows[fila].Cells[2].Value.ToString()+" "+ DgOrder.Rows[fila].Cells[1].Value.ToString()+ " * ";
                 amdorder.Registro(comorder, admclient.NameClient(TxtCi.Text), Int32.Parse(TxtTable.Text), Convert.ToDouble(LaTot.Text));
             }
-            Frm_Menu frm = new Frm_Menu();
-            frm.Show();
-            this.Visible = false;
+            MessageBox.Show("Su orden ha sido registrada con éxito");
+            TxtCi.Text = "";
+            TxtTable.Text = "";
+            DgOrder.Rows.Clear();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_MenuOpciones frmOpciones = new Frm_MenuOpciones();
+            frmOpciones.Show();
+        }
+
+        private void TxtCi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Numbers(sender, e);
+        }
+
+        private void TxtCod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Numbers(sender, e);
+        }
+
+        private void TxtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Numbers(sender, e);
+        }
+
+        private void TxtTable_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Numbers(sender, e);
         }
     }
 }

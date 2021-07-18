@@ -51,12 +51,13 @@ namespace Proyecto_Poe
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(106, 366);
+            this.button1.Location = new System.Drawing.Point(117, 366);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 65);
             this.button1.TabIndex = 0;
             this.button1.Text = "Registros";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -99,7 +100,7 @@ namespace Proyecto_Poe
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(275, 121);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 121);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +112,7 @@ namespace Proyecto_Poe
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(139, 8);
+            this.panel2.Location = new System.Drawing.Point(133, 8);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(440, 174);
             this.panel2.TabIndex = 6;
@@ -135,7 +136,7 @@ namespace Proyecto_Poe
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(424, 366);
+            this.button4.Location = new System.Drawing.Point(444, 366);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(136, 65);
             this.button4.TabIndex = 4;
@@ -152,7 +153,7 @@ namespace Proyecto_Poe
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(106, 281);
+            this.button3.Location = new System.Drawing.Point(117, 281);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 65);
             this.button3.TabIndex = 3;
@@ -167,7 +168,7 @@ namespace Proyecto_Poe
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(424, 281);
+            this.button2.Location = new System.Drawing.Point(444, 281);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 65);
             this.button2.TabIndex = 2;
