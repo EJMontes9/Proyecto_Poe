@@ -31,6 +31,18 @@ namespace Control
             return false;
         }
 
+        public string NameClient(string ci)
+        {
+            foreach (Client a in lisClient)
+            {
+                if (ci == a.Ci)
+                {
+                    return a.Ci;
+                }
+            }
+            return "0000000000";
+        }
+
         
 
     }

@@ -13,7 +13,9 @@ namespace Proyecto_Poe
 {
     public partial class Frm_Order : Form
     {
+        Adm_Order amdorder = new Adm_Order();
         Adm_Food amdfood = new Adm_Food();
+        Adm_Client admclient = new Adm_Client();
         double TotPay = 0.00;
         int i;
         public Frm_Order()
@@ -55,6 +57,18 @@ namespace Proyecto_Poe
             TotPay = TotPay - ndelete;
             LaTot.Text = TotPay.ToString("0.00");
             DgOrder.Rows.RemoveAt(i);
+        }
+
+        private void BtOrder_Click(object sender, EventArgs e)
+        {
+            for (int fila = 0; fila < DgOrder.Rows.Count; fila++)
+            {
+                string  comorder= "-"+DgOrder.Rows[fila].Cells[2].Value.ToString()+" "+ DgOrder.Rows[fila].Cells[1].Value.ToString()+ " * ";
+                amdorder.Registro(comorder, admclient.NameClient(TxtCi.Text), Int32.Parse(TxtTable.Text), Convert.ToDouble(LaTot.Text));
+            }
+            Frm_Menu frm = new Frm_Menu();
+            frm.Show();
+            this.Visible = false;
         }
     }
 }

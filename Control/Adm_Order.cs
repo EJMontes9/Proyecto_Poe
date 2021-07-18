@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Control
 {
-    class Adm_Order
+    public class Adm_Order
     {
         List<Order> lisOrder = new List<Order>();
 
@@ -15,9 +15,9 @@ namespace Control
         {
         }
 
-        public void Registro(List<Food> lisFood, Client client, int table, double totPay)
+        public void Registro(string comorder, string client, int table, double totPay)
         {
-            Order obj = new Order(lisFood, client, table, totPay);
+            Order obj = new Order(comorder, client, table, totPay);
             lisOrder.Add(obj);
         }
     }

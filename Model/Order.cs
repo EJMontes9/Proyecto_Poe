@@ -8,14 +8,14 @@ namespace Model
 {
     public class Order
     {
-        private List<Food> lisFood = new List<Food>();
-        private Client client;
+        private string comorder;
+        private string client;
         private int table;
         private double totPay;
 
-        public Order(List<Food> lisFood, Client client, int table, double totPay)
+        public Order(string comorder, string client, int table, double totPay)
         {
-            this.lisFood = lisFood;
+            this.comorder = comorder;
             this.client = client;
             this.table = table;
             this.totPay = totPay;
@@ -25,8 +25,8 @@ namespace Model
         {
         }
 
-        public List<Food> LisFood { get => lisFood; set => lisFood = value; }
-        public Client Client { get => client; set => client = value; }
+        public string Comorder { get => comorder; set => comorder = value; }
+        public string Client { get => client; set => client = value; }
         public int Table { get => table; set => table = value; }
         public double TotPay { get => totPay; set => totPay = value; }
 

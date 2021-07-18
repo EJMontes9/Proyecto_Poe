@@ -44,7 +44,12 @@ namespace Proyecto_Poe
             this.LaTot = new System.Windows.Forms.Label();
             this.BTAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtCi = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BtOrder = new System.Windows.Forms.Button();
             this.BtDelete = new System.Windows.Forms.Button();
+            this.TxtTable = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgOrder)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +85,7 @@ namespace Proyecto_Poe
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(314, 85);
+            this.label3.Location = new System.Drawing.Point(292, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 4;
@@ -88,7 +93,7 @@ namespace Proyecto_Poe
             // 
             // TxtAmount
             // 
-            this.TxtAmount.Location = new System.Drawing.Point(387, 86);
+            this.TxtAmount.Location = new System.Drawing.Point(365, 86);
             this.TxtAmount.Name = "TxtAmount";
             this.TxtAmount.Size = new System.Drawing.Size(100, 20);
             this.TxtAmount.TabIndex = 3;
@@ -169,7 +174,7 @@ namespace Proyecto_Poe
             this.BTAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BTAdd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTAdd.ForeColor = System.Drawing.Color.White;
-            this.BTAdd.Location = new System.Drawing.Point(524, 81);
+            this.BTAdd.Location = new System.Drawing.Point(282, 386);
             this.BTAdd.Name = "BTAdd";
             this.BTAdd.Size = new System.Drawing.Size(104, 27);
             this.BTAdd.TabIndex = 9;
@@ -180,6 +185,11 @@ namespace Proyecto_Poe
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.TxtTable);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.TxtCi);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.BtOrder);
             this.panel1.Controls.Add(this.BtDelete);
             this.panel1.Controls.Add(this.LaTot);
             this.panel1.Controls.Add(this.BTAdd);
@@ -194,6 +204,38 @@ namespace Proyecto_Poe
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(672, 450);
             this.panel1.TabIndex = 10;
+            // 
+            // TxtCi
+            // 
+            this.TxtCi.Location = new System.Drawing.Point(552, 86);
+            this.TxtCi.Name = "TxtCi";
+            this.TxtCi.Size = new System.Drawing.Size(100, 20);
+            this.TxtCi.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(479, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 19);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "CI Cliente";
+            // 
+            // BtOrder
+            // 
+            this.BtOrder.BackColor = System.Drawing.Color.Blue;
+            this.BtOrder.FlatAppearance.BorderSize = 0;
+            this.BtOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtOrder.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtOrder.ForeColor = System.Drawing.Color.White;
+            this.BtOrder.Location = new System.Drawing.Point(172, 386);
+            this.BtOrder.Name = "BtOrder";
+            this.BtOrder.Size = new System.Drawing.Size(104, 27);
+            this.BtOrder.TabIndex = 11;
+            this.BtOrder.Text = "Ordenar";
+            this.BtOrder.UseVisualStyleBackColor = false;
+            this.BtOrder.Click += new System.EventHandler(this.BtOrder_Click);
             // 
             // BtDelete
             // 
@@ -210,6 +252,23 @@ namespace Proyecto_Poe
             this.BtDelete.UseVisualStyleBackColor = false;
             this.BtDelete.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // TxtTable
+            // 
+            this.TxtTable.Location = new System.Drawing.Point(552, 45);
+            this.TxtTable.Name = "TxtTable";
+            this.TxtTable.Size = new System.Drawing.Size(100, 20);
+            this.TxtTable.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(479, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 19);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Mesa";
+            // 
             // Frm_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +277,6 @@ namespace Proyecto_Poe
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Name = "Frm_Order";
-            this.Text = "EJM";
             ((System.ComponentModel.ISupportInitialize)(this.DgOrder)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -244,5 +302,10 @@ namespace Proyecto_Poe
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioTot;
         private System.Windows.Forms.Button BtDelete;
+        private System.Windows.Forms.Button BtOrder;
+        private System.Windows.Forms.TextBox TxtCi;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TxtTable;
+        private System.Windows.Forms.Label label6;
     }
 }
