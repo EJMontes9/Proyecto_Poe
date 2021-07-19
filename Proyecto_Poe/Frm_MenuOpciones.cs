@@ -40,7 +40,9 @@ namespace Proyecto_Poe
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            Frm_Reserva reserva = new Frm_Reserva();
+            reserva.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

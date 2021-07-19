@@ -12,9 +12,22 @@ namespace Proyecto_Poe
 {
     public partial class Frm_Reserva : Form
     {
+        ClsValidations validacion = new ClsValidations();
         public Frm_Reserva()
         {
             InitializeComponent();
+        }
+
+        private void txtNombreReserva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.Only_Letters(sender, e);
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_MenuOpciones frmOpciones = new Frm_MenuOpciones();
+            frmOpciones.Show();
         }
     }
 }
