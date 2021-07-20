@@ -46,13 +46,13 @@ namespace Proyecto_Poe
             this.LaTot = new System.Windows.Forms.Label();
             this.BTAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.TxtTable = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtCi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BtOrder = new System.Windows.Forms.Button();
             this.BtDelete = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgOrder)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -233,6 +233,21 @@ namespace Proyecto_Poe
             this.panel1.Size = new System.Drawing.Size(636, 450);
             this.panel1.TabIndex = 10;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.White;
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegresar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(275, 400);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(119, 30);
+            this.btnRegresar.TabIndex = 20;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // TxtTable
             // 
             this.TxtTable.Location = new System.Drawing.Point(569, 61);
@@ -253,7 +268,6 @@ namespace Proyecto_Poe
             this.label6.Size = new System.Drawing.Size(45, 19);
             this.label6.TabIndex = 15;
             this.label6.Text = "Mesa";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // TxtCi
             // 
@@ -305,21 +319,6 @@ namespace Proyecto_Poe
             this.BtDelete.Text = "Eliminar";
             this.BtDelete.UseVisualStyleBackColor = false;
             this.BtDelete.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.Color.White;
-            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegresar.FlatAppearance.BorderSize = 0;
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegresar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(275, 400);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(119, 30);
-            this.btnRegresar.TabIndex = 20;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // Frm_Order
             // 

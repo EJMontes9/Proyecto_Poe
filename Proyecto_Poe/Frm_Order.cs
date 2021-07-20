@@ -26,24 +26,30 @@ namespace Proyecto_Poe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int code = Int32.Parse(TxtCod.Text);
-            int amount = Int32.Parse(TxtAmount.Text); 
-            double Price = amdfood.Price(code);
-            double Tot = Price * amount;
-            if (amdfood.NameFood(code) == "Comida no encontrada")
+            try
             {
-                MessageBox.Show("Codigo Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                DgOrder.Rows.Add(code, amdfood.NameFood(code), amount, amdfood.Price(code), Tot);
-                TotPay = TotPay + Tot;
-                LaTot.Text = TotPay.ToString("0.00");
-            }
+                int code = Int32.Parse(TxtCod.Text);
+                int amount = Int32.Parse(TxtAmount.Text);
+                double Price = amdfood.Price(code);
+                double Tot = Price * amount;
+                if (amdfood.NameFood(code) == "Comida no encontrada")
+                {
+                    MessageBox.Show("Codigo Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DgOrder.Rows.Add(code, amdfood.NameFood(code), amount, amdfood.Price(code), Tot);
+                    TotPay = TotPay + Tot;
+                    LaTot.Text = TotPay.ToString("0.00");
+                }
 
-            TxtAmount.Text = "";
-            TxtCod.Text = "";
-            
+                TxtAmount.Text = "";
+                TxtCod.Text = "";
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("porfavor, ingrese codigo y cantidad del producto");
+            }
         }
 
         private void DgOrder_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -54,10 +60,13 @@ namespace Proyecto_Poe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            double ndelete = Convert.ToDouble(DgOrder.CurrentRow.Cells[4].Value.ToString());
-            TotPay = TotPay - ndelete;
-            LaTot.Text = TotPay.ToString("0.00");
-            DgOrder.Rows.RemoveAt(i);
+            if (DgOrder.CurrentCell != null)
+            {
+                double ndelete = Convert.ToDouble(DgOrder.CurrentRow.Cells[4].Value.ToString());
+                TotPay = TotPay - ndelete;
+                LaTot.Text = TotPay.ToString("0.00");
+                DgOrder.Rows.RemoveAt(i);
+            }  
         }
 
         private void BtOrder_Click(object sender, EventArgs e)
@@ -71,11 +80,6 @@ namespace Proyecto_Poe
             TxtCi.Text = "";
             TxtTable.Text = "";
             DgOrder.Rows.Clear();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
