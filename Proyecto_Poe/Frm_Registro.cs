@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Proyecto_Poe
 {
     public partial class Frm_Registro : Form
     {
+        Adm_Order adm = Adm_Order.getAdm();
         public Frm_Registro()
         {
             InitializeComponent();
+            adm.Get().LlenarDatos(dgv_Registros);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -28,6 +31,11 @@ namespace Proyecto_Poe
         {
             ClsValidations validar = new ClsValidations();
             validar.Only_Numbers(sender, e);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

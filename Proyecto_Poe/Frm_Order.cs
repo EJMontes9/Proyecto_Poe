@@ -13,7 +13,7 @@ namespace Proyecto_Poe
 {
     public partial class Frm_Order : Form
     {
-        Adm_Order amdorder = new Adm_Order();
+        Adm_Order amdorder = Adm_Order.getAdm();
         Adm_Food amdfood = new Adm_Food();
         Adm_Client admclient = new Adm_Client();
         ClsValidations validar = new ClsValidations();
@@ -97,7 +97,7 @@ namespace Proyecto_Poe
                 }
                 try
                 {
-                    amdorder.Registro(comorder, admclient.NameClient(TxtCi.Text), Int32.Parse(TxtTable.Text), Convert.ToDouble(LaTot.Text));
+                    amdorder.Get().Registro(comorder, admclient.NameClient(TxtCi.Text), Int32.Parse(TxtTable.Text), Convert.ToDouble(LaTot.Text));
                     MessageBox.Show("Su orden ha sido registrada con éxito");
                     TxtCi.Text = "";
                     TxtTable.Text = "";

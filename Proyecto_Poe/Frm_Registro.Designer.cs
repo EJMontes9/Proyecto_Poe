@@ -46,6 +46,8 @@ namespace Proyecto_Poe
             // 
             // dgv_Registros
             // 
+            this.dgv_Registros.AllowUserToAddRows = false;
+            this.dgv_Registros.AllowUserToDeleteRows = false;
             this.dgv_Registros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -103,6 +105,7 @@ namespace Proyecto_Poe
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnRegresar
             // 
