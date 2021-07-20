@@ -29,7 +29,6 @@ namespace Proyecto_Poe
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Reserva));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@ namespace Proyecto_Poe
             this.label7 = new System.Windows.Forms.Label();
             this.txtSugerencias = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -326,6 +324,5 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSugerencias;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Timer timer1;
     }
 }
