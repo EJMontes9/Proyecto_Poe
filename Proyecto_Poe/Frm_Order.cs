@@ -18,6 +18,7 @@ namespace Proyecto_Poe
         Adm_Client admclient = new Adm_Client();
         ClsValidations validar = new ClsValidations();
         double TotPay = 0.00;
+        string comorder;
         int i;
         public Frm_Order()
         {
@@ -60,26 +61,59 @@ namespace Proyecto_Poe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            bool removeFood;
             if (DgOrder.CurrentCell != null)
             {
                 double ndelete = Convert.ToDouble(DgOrder.CurrentRow.Cells[4].Value.ToString());
-                TotPay = TotPay - ndelete;
-                LaTot.Text = TotPay.ToString("0.00");
-                DgOrder.Rows.RemoveAt(i);
-            }  
+                try
+                {
+                    DgOrder.Rows.RemoveAt(i);
+                    removeFood = true;
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("Escoja el dato que desea eliminar");
+                    removeFood = false;
+                }
+                if (removeFood) {
+                    TotPay = TotPay - ndelete;
+                    LaTot.Text = TotPay.ToString("0.00");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existen datos para eliminar ");
+            } 
         }
-
+        
         private void BtOrder_Click(object sender, EventArgs e)
         {
-            for (int fila = 0; fila < DgOrder.Rows.Count; fila++)
+            
+            if (DgOrder.CurrentCell != null)
             {
-                string  comorder= "-"+DgOrder.Rows[fila].Cells[2].Value.ToString()+" "+ DgOrder.Rows[fila].Cells[1].Value.ToString()+ " * ";
-                amdorder.Registro(comorder, admclient.NameClient(TxtCi.Text), Int32.Parse(TxtTable.Text), Convert.ToDouble(LaTot.Text));
+                for (int fila = 0; fila < DgOrder.Rows.Count; fila++)
+                {
+                    comorder = "-" + DgOrder.Rows[fila].Cells[2].Value.ToString() + " " + DgOrder.Rows[fila].Cells[1].Value.ToString() + " * ";
+                }
+                try
+                {
+                    amdorder.Registro(comorder, admclient.NameClient(TxtCi.Text), Int32.Parse(TxtTable.Text), Convert.ToDouble(LaTot.Text));
+                    MessageBox.Show("Su orden ha sido registrada con éxito");
+                    TxtCi.Text = "";
+                    TxtTable.Text = "";
+                    TotPay = 0;
+                    LaTot.Text = TotPay.ToString("0.00");
+                    DgOrder.Rows.Clear();
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Porfavor ingrese el numero de mesa");
+                }
             }
-            MessageBox.Show("Su orden ha sido registrada con éxito");
-            TxtCi.Text = "";
-            TxtTable.Text = "";
-            DgOrder.Rows.Clear();
+            else
+            {
+                MessageBox.Show("No existen productos para crear su odren ");
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
