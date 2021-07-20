@@ -37,11 +37,6 @@ namespace Proyecto_Poe
             this.label3 = new System.Windows.Forms.Label();
             this.TxtAmount = new System.Windows.Forms.TextBox();
             this.DgOrder = new System.Windows.Forms.DataGridView();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_PrecioTot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.LaTot = new System.Windows.Forms.Label();
             this.BTAdd = new System.Windows.Forms.Button();
@@ -53,6 +48,11 @@ namespace Proyecto_Poe
             this.label5 = new System.Windows.Forms.Label();
             this.BtOrder = new System.Windows.Forms.Button();
             this.BtDelete = new System.Windows.Forms.Button();
+            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_PrecioTot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgOrder)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -137,36 +137,6 @@ namespace Proyecto_Poe
             this.DgOrder.Size = new System.Drawing.Size(574, 225);
             this.DgOrder.TabIndex = 5;
             this.DgOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgOrder_CellClick);
-            // 
-            // cod
-            // 
-            this.cod.HeaderText = "Codigo";
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            // 
-            // DG_Plato
-            // 
-            this.DG_Plato.HeaderText = "Plato";
-            this.DG_Plato.Name = "DG_Plato";
-            this.DG_Plato.ReadOnly = true;
-            // 
-            // DG_Cantidad
-            // 
-            this.DG_Cantidad.HeaderText = "Cantidad";
-            this.DG_Cantidad.Name = "DG_Cantidad";
-            this.DG_Cantidad.ReadOnly = true;
-            // 
-            // DG_PrecioUnitario
-            // 
-            this.DG_PrecioUnitario.HeaderText = "Precio Unitario";
-            this.DG_PrecioUnitario.Name = "DG_PrecioUnitario";
-            this.DG_PrecioUnitario.ReadOnly = true;
-            // 
-            // DG_PrecioTot
-            // 
-            this.DG_PrecioTot.HeaderText = "Precio Total";
-            this.DG_PrecioTot.Name = "DG_PrecioTot";
-            this.DG_PrecioTot.ReadOnly = true;
             // 
             // label4
             // 
@@ -320,6 +290,38 @@ namespace Proyecto_Poe
             this.BtDelete.UseVisualStyleBackColor = false;
             this.BtDelete.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // cod
+            // 
+            this.cod.HeaderText = "Codigo";
+            this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
+            // 
+            // DG_Plato
+            // 
+            this.DG_Plato.HeaderText = "Plato";
+            this.DG_Plato.Name = "DG_Plato";
+            this.DG_Plato.ReadOnly = true;
+            this.DG_Plato.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Plato.Width = 131;
+            // 
+            // DG_Cantidad
+            // 
+            this.DG_Cantidad.HeaderText = "Cantidad";
+            this.DG_Cantidad.Name = "DG_Cantidad";
+            this.DG_Cantidad.ReadOnly = true;
+            // 
+            // DG_PrecioUnitario
+            // 
+            this.DG_PrecioUnitario.HeaderText = "Precio Unitario";
+            this.DG_PrecioUnitario.Name = "DG_PrecioUnitario";
+            this.DG_PrecioUnitario.ReadOnly = true;
+            // 
+            // DG_PrecioTot
+            // 
+            this.DG_PrecioTot.HeaderText = "Precio Total";
+            this.DG_PrecioTot.Name = "DG_PrecioTot";
+            this.DG_PrecioTot.ReadOnly = true;
+            // 
             // Frm_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,11 +354,6 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Label LaTot;
         private System.Windows.Forms.Button BTAdd;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_Plato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioTot;
         private System.Windows.Forms.Button BtDelete;
         private System.Windows.Forms.Button BtOrder;
         private System.Windows.Forms.TextBox TxtCi;
@@ -364,5 +361,10 @@ namespace Proyecto_Poe
         private System.Windows.Forms.TextBox TxtTable;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DG_Plato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DG_Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DG_PrecioTot;
     }
 }

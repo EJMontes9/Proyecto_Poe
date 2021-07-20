@@ -13,11 +13,13 @@ namespace Proyecto_Poe
 {
     public partial class Form1 : Form
     {
-        Adm_Client amd = new Adm_Client();
+        Adm_Client adm = Adm_Client.getAdm();
+        Adm_Food adm_Food = Adm_Food.getAdm();
 
         public Form1()
         {
             InitializeComponent();
+            adm_Food.Get().savefood();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -25,7 +27,7 @@ namespace Proyecto_Poe
             string cedula = TxtCi.Text;
             string contraseña = TxtPassword.Text;
 
-            if (amd.IniciarSesion(cedula, contraseña))
+            if (adm.Get().IniciarSesion(cedula, contraseña))
             {
                 //MessageBox.Show("Se inicio sesion", "Inicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Visible = false;

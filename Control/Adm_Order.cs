@@ -27,12 +27,6 @@ namespace Control
             return adm;
         }
 
-        public void Registro(string comorder, string client, int table, double totPay)
-        {
-            Order obj = new Order(comorder, client, table, totPay);
-            lisOrder.Add(obj);
-        }
-
         public Adm_Order Get()
         {
             if (adm == null)
@@ -42,11 +36,28 @@ namespace Control
             return adm;
         }
 
-        public void LlenarDatos(DataGridView DGPresentar)
+        public void Registro(string comorder, string client, int table, double totPay)
+        {
+            Order obj = new Order(comorder, client, table, totPay);
+            lisOrder.Add(obj);
+        }
+        
+        public void FillData(DataGridView DGPresentar)
         {
             foreach (var a in lisOrder)
             {
                 DGPresentar.Rows.Add(a.Comorder, a.Client, a.Table, a.TotPay);
+            }
+        }
+
+        public void FillData(DataGridView DGPresentar,int table)
+        {
+            foreach (var a in lisOrder)
+            {
+                if (table == a.Table)
+                {
+                    DGPresentar.Rows.Add(a.Comorder, a.Client, a.Table, a.TotPay);
+                }
             }
         }
     }

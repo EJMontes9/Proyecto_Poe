@@ -17,7 +17,7 @@ namespace Proyecto_Poe
         public Frm_Registro()
         {
             InitializeComponent();
-            adm.Get().LlenarDatos(dgv_Registros);
+            adm.Get().FillData(DgRecords);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -35,7 +35,8 @@ namespace Proyecto_Poe
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            DgRecords.Rows.Clear();
+            adm.Get().FillData(DgRecords,TxtCi.Text);
         }
     }
 }

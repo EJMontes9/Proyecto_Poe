@@ -31,24 +31,24 @@ namespace Proyecto_Poe
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Registro));
-            this.dgv_Registros = new System.Windows.Forms.DataGridView();
+            this.DgRecords = new System.Windows.Forms.DataGridView();
             this.orderComplete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtCi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Registros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgRecords)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv_Registros
+            // DgRecords
             // 
-            this.dgv_Registros.AllowUserToAddRows = false;
-            this.dgv_Registros.AllowUserToDeleteRows = false;
-            this.dgv_Registros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DgRecords.AllowUserToAddRows = false;
+            this.DgRecords.AllowUserToDeleteRows = false;
+            this.DgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -56,18 +56,18 @@ namespace Proyecto_Poe
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Registros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Registros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Registros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderComplete,
             this.cliente,
             this.mesa,
             this.totPay});
-            this.dgv_Registros.Location = new System.Drawing.Point(35, 119);
-            this.dgv_Registros.Name = "dgv_Registros";
-            this.dgv_Registros.ReadOnly = true;
-            this.dgv_Registros.Size = new System.Drawing.Size(595, 216);
-            this.dgv_Registros.TabIndex = 0;
+            this.DgRecords.Location = new System.Drawing.Point(35, 119);
+            this.DgRecords.Name = "DgRecords";
+            this.DgRecords.ReadOnly = true;
+            this.DgRecords.Size = new System.Drawing.Size(595, 216);
+            this.DgRecords.TabIndex = 0;
             // 
             // orderComplete
             // 
@@ -122,14 +122,14 @@ namespace Proyecto_Poe
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // textBox1
+            // TxtCi
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 75);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(113, 20);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.TxtCi.Location = new System.Drawing.Point(212, 75);
+            this.TxtCi.MaxLength = 10;
+            this.TxtCi.Name = "TxtCi";
+            this.TxtCi.Size = new System.Drawing.Size(113, 20);
+            this.TxtCi.TabIndex = 22;
+            this.TxtCi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label2
             // 
@@ -139,9 +139,9 @@ namespace Proyecto_Poe
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(36, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 23);
+            this.label2.Size = new System.Drawing.Size(153, 23);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Búsqueda por cédula";
+            this.label2.Text = "Búsqueda  # Mesa";
             // 
             // label1
             // 
@@ -165,16 +165,16 @@ namespace Proyecto_Poe
             this.ClientSize = new System.Drawing.Size(662, 407);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtCi);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dgv_Registros);
+            this.Controls.Add(this.DgRecords);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Frm_Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Registros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgRecords)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,14 +182,14 @@ namespace Proyecto_Poe
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv_Registros;
+        private System.Windows.Forms.DataGridView DgRecords;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderComplete;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn mesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn totPay;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtCi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

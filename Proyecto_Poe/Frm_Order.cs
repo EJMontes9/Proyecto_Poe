@@ -14,7 +14,7 @@ namespace Proyecto_Poe
     public partial class Frm_Order : Form
     {
         Adm_Order amdorder = Adm_Order.getAdm();
-        Adm_Food amdfood = new Adm_Food();
+        Adm_Food amdfood = Adm_Food.getAdm();
         Adm_Client admclient = new Adm_Client();
         ClsValidations validar = new ClsValidations();
         double TotPay = 0.00;
@@ -31,15 +31,15 @@ namespace Proyecto_Poe
             {
                 int code = Int32.Parse(TxtCod.Text);
                 int amount = Int32.Parse(TxtAmount.Text);
-                double Price = amdfood.Price(code);
+                double Price = amdfood.Get().Price(code);
                 double Tot = Price * amount;
-                if (amdfood.NameFood(code) == "Comida no encontrada")
+                if (amdfood.Get().NameFood(code) == "Comida no encontrada")
                 {
                     MessageBox.Show("Codigo Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DgOrder.Rows.Add(code, amdfood.NameFood(code), amount, amdfood.Price(code), Tot);
+                    DgOrder.Rows.Add(code, amdfood.Get().NameFood(code), amount, amdfood.Get().Price(code), Tot);
                     TotPay = TotPay + Tot;
                     LaTot.Text = TotPay.ToString("0.00");
                 }
@@ -93,7 +93,7 @@ namespace Proyecto_Poe
             {
                 for (int fila = 0; fila < DgOrder.Rows.Count; fila++)
                 {
-                    comorder = "-" + DgOrder.Rows[fila].Cells[2].Value.ToString() + " " + DgOrder.Rows[fila].Cells[1].Value.ToString() + " * ";
+                    comorder = comorder+"-" + DgOrder.Rows[fila].Cells[2].Value.ToString() + " " + DgOrder.Rows[fila].Cells[1].Value.ToString() + " * \n";
                 }
                 try
                 {
@@ -103,6 +103,7 @@ namespace Proyecto_Poe
                     TxtTable.Text = "";
                     TotPay = 0;
                     LaTot.Text = TotPay.ToString("0.00");
+                    comorder = "";
                     DgOrder.Rows.Clear();
                 }
                 catch (FormatException)

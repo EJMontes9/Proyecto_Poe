@@ -159,9 +159,9 @@ namespace Proyecto_Poe
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(587, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 23);
+            this.label5.Size = new System.Drawing.Size(106, 23);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Arroz con menestra y carne";
+            this.label5.Text = "Encebollado";
             // 
             // pictureBox5
             // 
