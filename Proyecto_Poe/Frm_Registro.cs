@@ -36,7 +36,7 @@ namespace Proyecto_Poe
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             DgRecords.Rows.Clear();
-            adm.Get().FillData(DgRecords,TxtCi.Text);
+            adm.Get().FillData(DgRecords, Int32.Parse(TxtCi.Text));
         }
     }
 }
