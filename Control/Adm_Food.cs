@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Control
 {
@@ -75,6 +76,15 @@ namespace Control
             lisFood.Add(obj);
         }
 
-        
+        public void FillData(DataGridView DGPresentar)
+        {
+            foreach (var a in lisFood)
+            {
+                DGPresentar.Rows.Add(a.Code, a.FoodName, a.Price, a.Observation, a.State);
+            }
+        }
+
+
+
     }
 }
