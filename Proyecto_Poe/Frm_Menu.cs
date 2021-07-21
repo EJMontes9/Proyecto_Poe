@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Control;
 
 namespace Proyecto_Poe
 {
     public partial class Frm_Menu : Form
     {
+        Adm_Food food = Adm_Food.getAdm();
         public Frm_Menu()
         {
             InitializeComponent();
+            food.Get().FillData(dgvConsultarComida);
+
         }
 
         private void button1_Click(object sender, EventArgs e)

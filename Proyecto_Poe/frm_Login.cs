@@ -19,7 +19,6 @@ namespace Proyecto_Poe
         public Form1()
         {
             InitializeComponent();
-            adm_Food.Get().savefood();
         }
 
         private void button2_Click(object sender, EventArgs e)
