@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsValidations.cs" />
+    <Compile Include="Frm_ClientRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ClientRegister.Designer.cs">
+      <DependentUpon>Frm_ClientRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_FoodRegistrer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_ClientRegister.resx">
+      <DependentUpon>Frm_ClientRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_FoodRegistrer.resx">
       <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
     </EmbeddedResource>
