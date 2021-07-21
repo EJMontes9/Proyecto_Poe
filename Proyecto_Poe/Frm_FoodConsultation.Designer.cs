@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_Poe
 {
-    partial class Frm_Menu
+    partial class Frm_FoodConsultation
     {
         /// <summary>
         /// Required designer variable.
@@ -29,54 +29,26 @@ namespace Proyecto_Poe
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Californian FB", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(394, 23);
+            this.label1.Location = new System.Drawing.Point(300, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Menú";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(476, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 30);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(253, 325);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 27);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Consulta de comidas";
             // 
             // dataGridView1
             // 
@@ -87,10 +59,10 @@ namespace Proyecto_Poe
             this.precio,
             this.observacion,
             this.estado});
-            this.dataGridView1.Location = new System.Drawing.Point(87, 84);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 56);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(688, 213);
-            this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.Size = new System.Drawing.Size(534, 158);
+            this.dataGridView1.TabIndex = 2;
             // 
             // codigo
             // 
@@ -117,24 +89,35 @@ namespace Proyecto_Poe
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
             // 
-            // Frm_Menu
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 247);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 27);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(176, 247);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 27);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Regresar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Frm_FoodConsultation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(856, 375);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(641, 295);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Frm_Menu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu de Comida";
+            this.Name = "Frm_FoodConsultation";
+            this.Text = "Consulta de Comidas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,13 +127,13 @@ namespace Proyecto_Poe
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

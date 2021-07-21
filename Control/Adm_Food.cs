@@ -69,12 +69,11 @@ namespace Control
             return 0;
         }
 
-        public void Register(int code, string foodName, double price, bool state)
+        public void Register(int code, string foodName, double price, string observacion, bool state)
         {
-            Food obj = new Food(code,foodName,price,state);
+            Food obj = new Food(code, foodName, price, observacion, state);
             lisFood.Add(obj);
         }
 
-        
     }
 }
