@@ -10,22 +10,22 @@ namespace Control
     public class Adm_Reservation
     {
         List<Reservation> lisReservation = new List<Reservation>();
-        private static Reservation adm = null;
+        private static Adm_Reservation adm = null;
 
-        public static Reservation getAdm()
+        public static Adm_Reservation getAdm()
         {
             if (adm == null)
             {
-                adm = new Reservation();
+                adm = new Adm_Reservation();
             }
             return adm;
         }
 
-        public Reservation Get()
+        public Adm_Reservation Get()
         {
             if (adm == null)
             {
-                adm = new Reservation();
+                adm = new Adm_Reservation();
             }
             return adm;
         }
