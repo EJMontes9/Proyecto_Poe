@@ -254,7 +254,6 @@ namespace Proyecto_Poe
             this.txtSugerencias.Name = "txtSugerencias";
             this.txtSugerencias.Size = new System.Drawing.Size(285, 26);
             this.txtSugerencias.TabIndex = 17;
-            this.txtSugerencias.TextChanged += new System.EventHandler(this.txtSugerencias_TextChanged);
             // 
             // groupBox1
             // 

@@ -143,10 +143,5 @@ namespace Proyecto_Poe
         {
             validar.Only_Numbers(sender, e);
         }
-
-        private void DgOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

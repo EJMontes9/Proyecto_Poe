@@ -8,13 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Control;
 
 namespace Proyecto_Poe
 {
-    Adm_Reservation adm = Adm_Reservation.getAdm();
     public partial class Frm_Reserva : Form
     {
+        Adm_Reservation adm = Adm_Reservation.getAdm();
         ClsValidations validacion = new ClsValidations();
         public Frm_Reserva()
         {
@@ -59,11 +58,6 @@ namespace Proyecto_Poe
             txtNombreReserva.Text = "";
             cmbNumPersonas.Text = "";
             txtSugerencias.Text = "";
-        }
-
-        private void txtSugerencias_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

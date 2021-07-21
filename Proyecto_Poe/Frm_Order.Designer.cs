@@ -144,7 +144,6 @@ namespace Proyecto_Poe
             this.DgOrder.Size = new System.Drawing.Size(765, 277);
             this.DgOrder.TabIndex = 5;
             this.DgOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgOrder_CellClick);
-            this.DgOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgOrder_CellContentClick);
             // 
             // cod
             // 
