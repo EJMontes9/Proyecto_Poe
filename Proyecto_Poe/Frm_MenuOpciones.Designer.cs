@@ -32,6 +32,7 @@ namespace Proyecto_Poe
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MenuOpciones));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,7 +40,7 @@ namespace Proyecto_Poe
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,9 +53,10 @@ namespace Proyecto_Poe
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(213, 363);
+            this.button1.Location = new System.Drawing.Point(284, 447);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 65);
+            this.button1.Size = new System.Drawing.Size(181, 80);
             this.button1.TabIndex = 0;
             this.button1.Text = "Registros";
             this.button1.UseVisualStyleBackColor = false;
@@ -65,6 +67,7 @@ namespace Proyecto_Poe
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnConsulta);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btnRegresar);
@@ -73,10 +76,27 @@ namespace Proyecto_Poe
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(-3, -4);
+            this.panel1.Location = new System.Drawing.Point(-4, -5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(690, 456);
+            this.panel1.Size = new System.Drawing.Size(920, 561);
             this.panel1.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(519, 346);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(181, 80);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Reservas";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -85,9 +105,10 @@ namespace Proyecto_Poe
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(55, 281);
+            this.button4.Location = new System.Drawing.Point(73, 346);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 65);
+            this.button4.Size = new System.Drawing.Size(181, 80);
             this.button4.TabIndex = 8;
             this.button4.Text = "Registro Comida";
             this.button4.UseVisualStyleBackColor = false;
@@ -103,9 +124,10 @@ namespace Proyecto_Poe
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegresar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegresar.Location = new System.Drawing.Point(15, 8);
+            this.btnRegresar.Location = new System.Drawing.Point(20, 10);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(103, 67);
+            this.btnRegresar.Size = new System.Drawing.Size(137, 82);
             this.btnRegresar.TabIndex = 7;
             this.btnRegresar.Text = " Cerrar Sesión";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -117,9 +139,10 @@ namespace Proyecto_Poe
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(265, 121);
+            this.pictureBox1.Location = new System.Drawing.Point(353, 149);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 142);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 175);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -129,9 +152,10 @@ namespace Proyecto_Poe
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(133, 8);
+            this.panel2.Location = new System.Drawing.Point(177, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(440, 174);
+            this.panel2.Size = new System.Drawing.Size(587, 214);
             this.panel2.TabIndex = 6;
             // 
             // label1
@@ -140,9 +164,10 @@ namespace Proyecto_Poe
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Forte", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(147, 63);
+            this.label1.Location = new System.Drawing.Point(196, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 30);
+            this.label1.Size = new System.Drawing.Size(191, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "Restaurante";
             // 
@@ -155,9 +180,10 @@ namespace Proyecto_Poe
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(55, 363);
+            this.button3.Location = new System.Drawing.Point(73, 447);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 65);
+            this.button3.Size = new System.Drawing.Size(181, 80);
             this.button3.TabIndex = 3;
             this.button3.Text = "Consulta Menu";
             this.button3.UseVisualStyleBackColor = false;
@@ -170,38 +196,41 @@ namespace Proyecto_Poe
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(213, 281);
+            this.button2.Location = new System.Drawing.Point(284, 346);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 65);
+            this.button2.Size = new System.Drawing.Size(181, 80);
             this.button2.TabIndex = 2;
             this.button2.Text = "Ordenes";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
+            // btnConsulta
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(389, 281);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 65);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Reservas";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnConsulta.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.ForeColor = System.Drawing.Color.Black;
+            this.btnConsulta.Location = new System.Drawing.Point(519, 447);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(181, 80);
+            this.btnConsulta.TabIndex = 10;
+            this.btnConsulta.Text = "Consulta Reservas";
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // Frm_MenuOpciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(684, 450);
+            this.ClientSize = new System.Drawing.Size(912, 554);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Frm_MenuOpciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -226,5 +255,6 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }

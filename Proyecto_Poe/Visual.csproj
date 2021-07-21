@@ -84,6 +84,12 @@
       <DependentUpon>frm_Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_Presentar-reservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Presentar-reservaciones.Designer.cs">
+      <DependentUpon>frm_Presentar-reservaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Presentar-reservaciones.resx">
+      <DependentUpon>frm_Presentar-reservaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>

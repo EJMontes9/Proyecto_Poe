@@ -65,5 +65,12 @@ namespace Proyecto_Poe
             frm.Show();
             this.Visible = false;
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            frm_Presentar_reservaciones frm = new frm_Presentar_reservaciones();
+            frm.Show();
+            this.Visible = false;
+        }
     }
 }
