@@ -48,7 +48,7 @@ namespace Proyecto_Poe
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(394, 23);
+            this.label1.Location = new System.Drawing.Point(316, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 43);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace Proyecto_Poe
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(476, 322);
+            this.button1.Location = new System.Drawing.Point(427, 321);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 30);
             this.button1.TabIndex = 19;
@@ -71,15 +71,20 @@ namespace Proyecto_Poe
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(253, 325);
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(204, 324);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 27);
+            this.button3.Size = new System.Drawing.Size(106, 27);
             this.button3.TabIndex = 22;
             this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgvConsultarComida
             // 
+            this.dgvConsultarComida.AllowUserToAddRows = false;
+            this.dgvConsultarComida.AllowUserToDeleteRows = false;
             this.dgvConsultarComida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultarComida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -87,35 +92,42 @@ namespace Proyecto_Poe
             this.precio,
             this.observacion,
             this.estado});
-            this.dgvConsultarComida.Location = new System.Drawing.Point(87, 81);
+            this.dgvConsultarComida.Location = new System.Drawing.Point(76, 82);
             this.dgvConsultarComida.Name = "dgvConsultarComida";
-            this.dgvConsultarComida.Size = new System.Drawing.Size(688, 216);
+            this.dgvConsultarComida.ReadOnly = true;
+            this.dgvConsultarComida.Size = new System.Drawing.Size(578, 213);
             this.dgvConsultarComida.TabIndex = 21;
+            this.dgvConsultarComida.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarComida_CellClick);
             // 
             // codigo
             // 
             this.codigo.HeaderText = "Codigo";
             this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
             // 
             // nombre
             // 
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
             // precio
             // 
             this.precio.HeaderText = "Precio";
             this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
             // 
             // observacion
             // 
             this.observacion.HeaderText = "Observación";
             this.observacion.Name = "observacion";
+            this.observacion.ReadOnly = true;
             // 
             // estado
             // 
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             // 
             // Frm_Menu
             // 
@@ -125,7 +137,7 @@ namespace Proyecto_Poe
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(856, 375);
+            this.ClientSize = new System.Drawing.Size(726, 375);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dgvConsultarComida);
             this.Controls.Add(this.button1);

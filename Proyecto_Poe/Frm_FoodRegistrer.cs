@@ -14,6 +14,7 @@ namespace Proyecto_Poe
     public partial class Frm_FoodRegistrer : Form
     {
         Adm_Food amdfood = Adm_Food.getAdm();
+        ClsValidations validar = new ClsValidations();
         public Frm_FoodRegistrer()
         {
             InitializeComponent();
@@ -58,6 +59,16 @@ namespace Proyecto_Poe
             this.Close();
             Frm_MenuOpciones regresar = new Frm_MenuOpciones();
             regresar.Show();
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Numbers(sender, e);
+        }
+
+        private void txtNombreComida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Letters(sender, e);
         }
     }
 }

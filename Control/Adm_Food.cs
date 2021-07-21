@@ -72,5 +72,11 @@ namespace Control
                 DGPresentar.Rows.Add(a.Code, a.FoodName, a.Price, a.Observation, a.State);
             }
         }
+
+        public void deleteData(int eliminar)
+        {
+            lisFood.RemoveAt(eliminar);
+            
+        }
     }
 }
