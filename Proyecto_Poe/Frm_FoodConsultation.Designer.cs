@@ -30,7 +30,7 @@ namespace Proyecto_Poe
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_ConsultaComidas = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +38,7 @@ namespace Proyecto_Poe
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ConsultaComidas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,19 +50,19 @@ namespace Proyecto_Poe
             this.label1.TabIndex = 1;
             this.label1.Text = "Consulta de comidas";
             // 
-            // dataGridView1
+            // dgv_ConsultaComidas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_ConsultaComidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ConsultaComidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nombre,
             this.precio,
             this.observacion,
             this.estado});
-            this.dataGridView1.Location = new System.Drawing.Point(42, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(534, 158);
-            this.dataGridView1.TabIndex = 2;
+            this.dgv_ConsultaComidas.Location = new System.Drawing.Point(42, 56);
+            this.dgv_ConsultaComidas.Name = "dgv_ConsultaComidas";
+            this.dgv_ConsultaComidas.Size = new System.Drawing.Size(534, 158);
+            this.dgv_ConsultaComidas.TabIndex = 2;
             // 
             // codigo
             // 
@@ -114,11 +114,11 @@ namespace Proyecto_Poe
             this.ClientSize = new System.Drawing.Size(641, 295);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_ConsultaComidas);
             this.Controls.Add(this.label1);
             this.Name = "Frm_FoodConsultation";
             this.Text = "Consulta de Comidas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ConsultaComidas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +127,7 @@ namespace Proyecto_Poe
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_ConsultaComidas;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;

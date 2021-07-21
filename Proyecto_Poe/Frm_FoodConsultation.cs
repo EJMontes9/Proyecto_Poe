@@ -17,7 +17,7 @@ namespace Proyecto_Poe
         public Frm_FoodConsultation()
         {
             InitializeComponent();
-            food.Get().
+            food.Get().FillData(dgv_ConsultaComidas);
         }
     }
 }
