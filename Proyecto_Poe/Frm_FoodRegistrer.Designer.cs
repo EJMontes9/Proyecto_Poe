@@ -41,8 +41,8 @@ namespace Proyecto_Poe
             this.txtPrecioComida = new System.Windows.Forms.TextBox();
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdButtonDisponible = new System.Windows.Forms.RadioButton();
             this.rdButtonNoDisponible = new System.Windows.Forms.RadioButton();
+            this.rdButtonDisponible = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -164,19 +164,6 @@ namespace Proyecto_Poe
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
-            // rdButtonDisponible
-            // 
-            this.rdButtonDisponible.AutoSize = true;
-            this.rdButtonDisponible.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdButtonDisponible.ForeColor = System.Drawing.Color.White;
-            this.rdButtonDisponible.Location = new System.Drawing.Point(10, 14);
-            this.rdButtonDisponible.Name = "rdButtonDisponible";
-            this.rdButtonDisponible.Size = new System.Drawing.Size(82, 19);
-            this.rdButtonDisponible.TabIndex = 0;
-            this.rdButtonDisponible.TabStop = true;
-            this.rdButtonDisponible.Text = "Disponible";
-            this.rdButtonDisponible.UseVisualStyleBackColor = true;
-            // 
             // rdButtonNoDisponible
             // 
             this.rdButtonNoDisponible.AutoSize = true;
@@ -189,6 +176,19 @@ namespace Proyecto_Poe
             this.rdButtonNoDisponible.TabStop = true;
             this.rdButtonNoDisponible.Text = "No disponible ";
             this.rdButtonNoDisponible.UseVisualStyleBackColor = true;
+            // 
+            // rdButtonDisponible
+            // 
+            this.rdButtonDisponible.AutoSize = true;
+            this.rdButtonDisponible.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdButtonDisponible.ForeColor = System.Drawing.Color.White;
+            this.rdButtonDisponible.Location = new System.Drawing.Point(10, 14);
+            this.rdButtonDisponible.Name = "rdButtonDisponible";
+            this.rdButtonDisponible.Size = new System.Drawing.Size(82, 19);
+            this.rdButtonDisponible.TabIndex = 0;
+            this.rdButtonDisponible.TabStop = true;
+            this.rdButtonDisponible.Text = "Disponible";
+            this.rdButtonDisponible.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -222,6 +222,7 @@ namespace Proyecto_Poe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(443, 411);

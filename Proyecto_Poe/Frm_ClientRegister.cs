@@ -14,6 +14,7 @@ namespace Proyecto_Poe
     public partial class Frm_ClientRegister : Form
     {
         Adm_User adm_user = Adm_User.getAdm();
+        ClsValidations validar = new ClsValidations();
         public Frm_ClientRegister()
         {
             InitializeComponent();
@@ -32,6 +33,8 @@ namespace Proyecto_Poe
 
             adm_user.Get().Registro(ci, Nombre, Apellido, Telefono, Correo, Ciudad, Direccion, Contra);
 
+            MessageBox.Show("Usuario registrado exitosamente");
+
             txtCedula.Text = "";
             txtNombres.Text = "";
             txtApellidos.Text = "";
@@ -47,6 +50,31 @@ namespace Proyecto_Poe
             Form1 frm = new Form1();
             frm.Show();
             this.Visible = false;
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Numbers(sender, e);
+        }
+
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Letters(sender, e);
+        }
+
+        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Letters(sender, e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Numbers(sender, e);
+        }
+
+        private void txtCiudad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.Only_Letters(sender, e);
         }
     }
 }

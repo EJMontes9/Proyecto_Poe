@@ -31,13 +31,14 @@ namespace Proyecto_Poe
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.BtSingIn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtCi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@ namespace Proyecto_Poe
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.BtSingIn);
             this.panel1.Controls.Add(this.label3);
@@ -60,6 +62,18 @@ namespace Proyecto_Poe
             this.panel1.Size = new System.Drawing.Size(535, 350);
             this.panel1.TabIndex = 0;
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.BackgroundImage")));
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrar.Location = new System.Drawing.Point(272, 263);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(249, 75);
+            this.btnRegistrar.TabIndex = 8;
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
             // BtSingIn
             // 
             this.BtSingIn.BackColor = System.Drawing.Color.Transparent;
@@ -67,10 +81,10 @@ namespace Proyecto_Poe
             this.BtSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtSingIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtSingIn.FlatAppearance.BorderSize = 0;
-            this.BtSingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtSingIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtSingIn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtSingIn.ForeColor = System.Drawing.Color.Transparent;
-            this.BtSingIn.Location = new System.Drawing.Point(15, 263);
+            this.BtSingIn.Location = new System.Drawing.Point(17, 263);
             this.BtSingIn.Name = "BtSingIn";
             this.BtSingIn.Size = new System.Drawing.Size(249, 75);
             this.BtSingIn.TabIndex = 6;
@@ -131,15 +145,15 @@ namespace Proyecto_Poe
             this.label1.TabIndex = 0;
             this.label1.Text = "Iniciar Sesion";
             // 
-            // btnRegistrar
+            // label4
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(327, 291);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 8;
-            this.btnRegistrar.Text = "Registrarse";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(134, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 26);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Contraseña";
             // 
             // Form1
             // 
@@ -170,6 +184,7 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtCi;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Label label4;
     }
 }
 
