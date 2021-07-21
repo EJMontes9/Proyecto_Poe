@@ -36,7 +36,7 @@ namespace Proyecto_Poe
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.CurrentCell != null)
+            if (dataGridView1.CurrentCell != null)
             {
                 try
                 {
