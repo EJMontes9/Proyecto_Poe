@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ using Control;
 
 namespace Proyecto_Poe
 {
+    Adm_Reservation adm = Adm_Reservation.getAdm();
     public partial class Frm_Reserva : Form
     {
         ClsValidations validacion = new ClsValidations();
