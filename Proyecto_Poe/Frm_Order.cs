@@ -15,7 +15,7 @@ namespace Proyecto_Poe
     {
         Adm_Order amdorder = Adm_Order.getAdm();
         Adm_Food amdfood = Adm_Food.getAdm();
-        Adm_Client admclient = new Adm_Client();
+        Adm_User admclient = new Adm_User();
         ClsValidations validar = new ClsValidations();
         double TotPay = 0.00;
         string comorder;

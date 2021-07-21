@@ -72,16 +72,5 @@ namespace Control
                 DGPresentar.Rows.Add(a.Code, a.FoodName, a.Price, a.Observation, a.State);
             }
         }
-
-        public void deleteData(DataGridView DGPresentar)
-        {
-            foreach (var a in lisFood)
-            {
-                DGPresentar.Rows.Add(a.Code, a.FoodName, a.Price, a.Observation, a.State);
-            }
-        }
-
-
-
     }
 }

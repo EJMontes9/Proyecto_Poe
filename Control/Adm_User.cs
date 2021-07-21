@@ -7,30 +7,30 @@ using System.Threading.Tasks;
 
 namespace Control
 {
-    public class Adm_Client
+    public class Adm_User
     {
-        List<Client> lisClient = new List<Client>();
-        private static Adm_Client adm = null;
-        public Adm_Client()
+        List<Usuario> lisClient = new List<Usuario>();
+        private static Adm_User adm = null;
+        public Adm_User()
         {
-            Client a = new Client("0987654321","a","a","0999999999","email", "city ", "direction", "1111");
+            Usuario a = new Usuario("0987654321","a","a","0999999999","email", "city ", "direction", "1111");
             lisClient.Add(a);
         }
 
-        public static Adm_Client getAdm()
+        public static Adm_User getAdm()
         {
             if (adm == null)
             {
-                adm = new Adm_Client();
+                adm = new Adm_User();
             }
             return adm;
         }
 
-        public Adm_Client Get()
+        public Adm_User Get()
         {
             if (adm == null)
             {
-                adm = new Adm_Client();
+                adm = new Adm_User();
             }
             return adm;
         }
@@ -52,7 +52,7 @@ namespace Control
 
         public string NameClient(string ci)
         {
-            foreach (Client a in lisClient)
+            foreach (Usuario a in lisClient)
             {
                 if (ci == a.Ci)
                 {

@@ -87,9 +87,9 @@ namespace Proyecto_Poe
             this.precio,
             this.observacion,
             this.estado});
-            this.dgvConsultarComida.Location = new System.Drawing.Point(87, 84);
+            this.dgvConsultarComida.Location = new System.Drawing.Point(87, 81);
             this.dgvConsultarComida.Name = "dgvConsultarComida";
-            this.dgvConsultarComida.Size = new System.Drawing.Size(688, 213);
+            this.dgvConsultarComida.Size = new System.Drawing.Size(688, 216);
             this.dgvConsultarComida.TabIndex = 21;
             // 
             // codigo
