@@ -9,8 +9,9 @@ namespace Control
 {
     public class Adm_Reservation
     {
-        List<Reservation> lisOrder = new List<Reservation>();
+        List<Reservation> lisReservation = new List<Reservation>();
         private static Reservation adm = null;
+
         public static Reservation getAdm()
         {
             if (adm == null)
@@ -32,7 +33,7 @@ namespace Control
         public void Registro(string name, DateTime dateandTime, int people, string location, string suggestion)
         {
             Reservation obj = new Reservation(name, dateandTime, people, location, suggestion);
-            lisOrder.Add(obj);
+            lisReservation.Add(obj);
         }
     }
 }

@@ -192,6 +192,7 @@ namespace Proyecto_Poe
             this.btnReservar.TabIndex = 13;
             this.btnReservar.Text = "Reservar";
             this.btnReservar.UseVisualStyleBackColor = false;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
             // btnRegresar
             // 
