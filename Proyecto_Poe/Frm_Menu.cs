@@ -38,6 +38,7 @@ namespace Proyecto_Poe
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Eliminar una fila
             if (dgvConsultarComida.CurrentCell != null)
             {
                 try
