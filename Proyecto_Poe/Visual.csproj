@@ -104,6 +104,9 @@
     <Compile Include="RegisterUser.Designer.cs">
       <DependentUpon>RegisterUser.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Frm_ClientRegister.resx">
+      <DependentUpon>Frm_ClientRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_FoodRegistrer.resx">
       <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
     </EmbeddedResource>

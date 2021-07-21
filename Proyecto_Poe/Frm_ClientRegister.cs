@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Proyecto_Poe
 {
     public partial class Frm_ClientRegister : Form
     {
+        Adm_User adm_user = Adm_User.getAdm();
         public Frm_ClientRegister()
         {
             InitializeComponent();
@@ -26,8 +28,25 @@ namespace Proyecto_Poe
             String Correo = txtCorreo.Text;
             String Ciudad = txtCiudad.Text;
             String Direccion = txtDireccion.Text;
-            String Contraseña = txtContra.Text;
+            String Contra = txtContra.Text;
 
+            adm_user.Get().Registro(ci, Nombre, Apellido, Telefono, Correo, Ciudad, Direccion, Contra);
+
+            txtCedula.Text = "";
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            txtTelefono.Text = "";
+            txtCorreo.Text = "";
+            txtCiudad.Text = "";
+            txtDireccion.Text = "";
+            txtContra.Text = "";
+        }
+
+        private void cmdRegresar_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Visible = false;
         }
     }
 }

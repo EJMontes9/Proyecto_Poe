@@ -37,6 +37,7 @@ namespace Proyecto_Poe
             this.label2 = new System.Windows.Forms.Label();
             this.TxtCi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@ namespace Proyecto_Poe
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.BtSingIn);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.TxtPassword);
@@ -68,7 +70,7 @@ namespace Proyecto_Poe
             this.BtSingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtSingIn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtSingIn.ForeColor = System.Drawing.Color.Transparent;
-            this.BtSingIn.Location = new System.Drawing.Point(152, 260);
+            this.BtSingIn.Location = new System.Drawing.Point(15, 263);
             this.BtSingIn.Name = "BtSingIn";
             this.BtSingIn.Size = new System.Drawing.Size(249, 75);
             this.BtSingIn.TabIndex = 6;
@@ -129,6 +131,16 @@ namespace Proyecto_Poe
             this.label1.TabIndex = 0;
             this.label1.Text = "Iniciar Sesion";
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(327, 291);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 8;
+            this.btnRegistrar.Text = "Registrarse";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +169,7 @@ namespace Proyecto_Poe
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtCi;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }
 

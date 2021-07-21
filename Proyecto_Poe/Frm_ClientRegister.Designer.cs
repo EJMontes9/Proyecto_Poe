@@ -198,6 +198,7 @@ namespace Proyecto_Poe
             this.cmdRegresar.TabIndex = 17;
             this.cmdRegresar.Text = "Regresar";
             this.cmdRegresar.UseVisualStyleBackColor = true;
+            this.cmdRegresar.Click += new System.EventHandler(this.cmdRegresar_Click);
             // 
             // label9
             // 
