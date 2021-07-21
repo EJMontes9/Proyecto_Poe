@@ -43,6 +43,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adm_Reservation.cs" />
     <Compile Include="Adm_User.cs" />
     <Compile Include="Adm_Food.cs" />
     <Compile Include="Adm_Order.cs" />
