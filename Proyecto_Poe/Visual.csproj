@@ -98,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_ClientRegister.resx">
+      <DependentUpon>Frm_ClientRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_FoodRegistrer.resx">
       <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
     </EmbeddedResource>

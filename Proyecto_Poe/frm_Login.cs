@@ -49,5 +49,12 @@ namespace Proyecto_Poe
             clsValidations.Only_Numbers(sender, e);
 
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            Frm_ClientRegister frm2 = new Frm_ClientRegister();
+            frm2.Show();
+            this.Visible = false;
+        }
     }
 }
