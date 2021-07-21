@@ -30,14 +30,12 @@ namespace Proyecto_Poe
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Reserva));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreReserva = new System.Windows.Forms.TextBox();
-            this.txtHoraReserva = new System.Windows.Forms.TextBox();
             this.cmbNumPersonas = new System.Windows.Forms.ComboBox();
             this.rdButtonVentana = new System.Windows.Forms.RadioButton();
             this.rdButtonCentro = new System.Windows.Forms.RadioButton();
@@ -51,29 +49,17 @@ namespace Proyecto_Poe
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(47, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hora de Reserva";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(47, 154);
+            this.label2.Location = new System.Drawing.Point(26, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 19);
+            this.label2.Size = new System.Drawing.Size(207, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Día de Reservación ";
+            this.label2.Text = "Fecha y hora de Reservación ";
             // 
             // label3
             // 
@@ -81,7 +67,7 @@ namespace Proyecto_Poe
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(47, 182);
+            this.label3.Location = new System.Drawing.Point(26, 182);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(155, 19);
@@ -94,7 +80,7 @@ namespace Proyecto_Poe
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(47, 210);
+            this.label4.Location = new System.Drawing.Point(26, 217);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(137, 19);
@@ -107,7 +93,7 @@ namespace Proyecto_Poe
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(47, 98);
+            this.label5.Location = new System.Drawing.Point(26, 100);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(186, 19);
@@ -120,7 +106,7 @@ namespace Proyecto_Poe
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(194, 25);
+            this.label6.Location = new System.Drawing.Point(165, 21);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(152, 33);
@@ -135,14 +121,6 @@ namespace Proyecto_Poe
             this.txtNombreReserva.Size = new System.Drawing.Size(215, 22);
             this.txtNombreReserva.TabIndex = 6;
             this.txtNombreReserva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreReserva_KeyPress);
-            // 
-            // txtHoraReserva
-            // 
-            this.txtHoraReserva.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraReserva.Location = new System.Drawing.Point(239, 127);
-            this.txtHoraReserva.Name = "txtHoraReserva";
-            this.txtHoraReserva.Size = new System.Drawing.Size(78, 22);
-            this.txtHoraReserva.TabIndex = 7;
             // 
             // cmbNumPersonas
             // 
@@ -230,11 +208,15 @@ namespace Proyecto_Poe
             // 
             // dateReserva
             // 
+            this.dateReserva.CustomFormat = "dd/MM/yyyy hh:mm";
             this.dateReserva.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateReserva.Location = new System.Drawing.Point(239, 154);
+            this.dateReserva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateReserva.Location = new System.Drawing.Point(239, 139);
+            this.dateReserva.MinDate = new System.DateTime(2021, 7, 20, 0, 0, 0, 0);
             this.dateReserva.Name = "dateReserva";
-            this.dateReserva.Size = new System.Drawing.Size(200, 22);
+            this.dateReserva.Size = new System.Drawing.Size(215, 22);
             this.dateReserva.TabIndex = 15;
+            this.dateReserva.Value = new System.DateTime(2021, 7, 20, 0, 0, 0, 0);
             // 
             // label7
             // 
@@ -276,7 +258,7 @@ namespace Proyecto_Poe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(506, 403);
+            this.ClientSize = new System.Drawing.Size(485, 403);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtSugerencias);
             this.Controls.Add(this.label7);
@@ -284,14 +266,12 @@ namespace Proyecto_Poe
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.cmbNumPersonas);
-            this.Controls.Add(this.txtHoraReserva);
             this.Controls.Add(this.txtNombreReserva);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Frm_Reserva";
@@ -305,15 +285,12 @@ namespace Proyecto_Poe
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombreReserva;
-        private System.Windows.Forms.TextBox txtHoraReserva;
         private System.Windows.Forms.ComboBox cmbNumPersonas;
         private System.Windows.Forms.RadioButton rdButtonVentana;
         private System.Windows.Forms.RadioButton rdButtonCentro;

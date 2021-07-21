@@ -13,7 +13,7 @@ namespace Proyecto_Poe
 {
     public partial class Form1 : Form
     {
-        Adm_Client adm = Adm_Client.getAdm();
+        Adm_User adm = Adm_User.getAdm();
         Adm_Food adm_Food = Adm_Food.getAdm();
 
         public Form1()

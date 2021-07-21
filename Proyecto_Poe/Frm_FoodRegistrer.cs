@@ -48,7 +48,7 @@ namespace Proyecto_Poe
                 rdButtonDisponible.Checked = false;
                 rdButtonNoDisponible.Checked = false;
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Reelene todos los campos primero");
             }
