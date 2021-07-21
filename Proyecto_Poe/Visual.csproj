@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsValidations.cs" />
+    <Compile Include="Frm_FoodConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_FoodConsultation.Designer.cs">
+      <DependentUpon>Frm_FoodConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_FoodRegistrer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_FoodRegistrer.Designer.cs">
+      <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_MenuOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_FoodConsultation.resx">
+      <DependentUpon>Frm_FoodConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_FoodRegistrer.resx">
+      <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuOpciones.resx">
       <DependentUpon>Frm_MenuOpciones.cs</DependentUpon>
     </EmbeddedResource>

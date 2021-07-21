@@ -62,7 +62,5 @@ namespace Control
             return "0000000000";
         }
 
-        
-
     }
 }
