@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Control
 {
     public class Adm_User
     {
-        List<Usuario> lisClient = new List<Usuario>();
+        List<User> lisClient = new List<User>();
         private static Adm_User adm = null;
         public Adm_User()
         {
-            Usuario a = new Usuario("0987654321","a","a","0999999999","email", "city ", "direction", "1111");
+            User a = new User("0987654321", "a", "a", "0999999999", "email", "city ", "direction", "1111");
             lisClient.Add(a);
         }
 
@@ -52,7 +53,7 @@ namespace Control
 
         public string NameClient(string ci)
         {
-            foreach (Usuario a in lisClient)
+            foreach (User a in lisClient)
             {
                 if (ci == a.Ci)
                 {
@@ -62,5 +63,23 @@ namespace Control
             return "0000000000";
         }
 
+        public void Registro(string ci, string name, string lastName, string phone, string email, string city, string direction, string password)
+        {
+            User obj = new User(ci, name, lastName, phone, email, city, direction, password);
+            lisClient.Add(obj);
+        }
+
+        public void deleteData(int eliminar)
+        {
+            lisClient.RemoveAt(eliminar);
+        }
+
+        /*public void FillData(DataGridView DGPresentar)
+        {
+            foreach (var a in lisClient)
+            {
+                DGPresentar.Rows.Add(a.Ci,a.Name,a.LastName,a.Phone,a.Email,a.City,a.Direction,a.Password);
+            }
+        }*/
     }
 }

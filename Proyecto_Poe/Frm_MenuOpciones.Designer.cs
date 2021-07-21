@@ -32,13 +32,14 @@ namespace Proyecto_Poe
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MenuOpciones));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +65,7 @@ namespace Proyecto_Poe
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -75,6 +77,21 @@ namespace Proyecto_Poe
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(690, 456);
             this.panel1.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(55, 281);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(136, 65);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Registro Comida";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // btnRegresar
             // 
@@ -161,20 +178,20 @@ namespace Proyecto_Poe
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button4
+            // button5
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(55, 281);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 65);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Registro Comida";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.button5.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(389, 281);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(136, 65);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Reservas";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Frm_MenuOpciones
             // 
@@ -208,5 +225,6 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

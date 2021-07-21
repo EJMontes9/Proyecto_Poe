@@ -58,5 +58,12 @@ namespace Proyecto_Poe
             Frm_FoodRegistrer registro = new Frm_FoodRegistrer();
             registro.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Frm_Reserva frm = new Frm_Reserva();
+            frm.Show();
+            this.Visible = false;
+        }
     }
 }

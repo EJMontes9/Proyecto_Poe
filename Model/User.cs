@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Usuario:Persona
+    public class User:Persona
     {
         private string password;
 
 
-        public Usuario()
+        public User()
         {
         }
 
-        public Usuario(string ci, string name, string lastName, string phone, string email, string city, string direction, string password) : base(ci, name, lastName, phone, email, city, direction)
+        public User(string ci, string name, string lastName, string phone, string email, string city, string direction, string password) : base(ci, name, lastName, phone, email, city, direction)
         {
             this.password = password;
         }

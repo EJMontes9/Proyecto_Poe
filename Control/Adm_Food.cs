@@ -75,8 +75,7 @@ namespace Control
 
         public void deleteData(int eliminar)
         {
-            lisFood.RemoveAt(eliminar);
-            
+            lisFood.RemoveAt(eliminar); 
         }
     }
 }
