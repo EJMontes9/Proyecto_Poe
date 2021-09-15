@@ -108,6 +108,58 @@ namespace Model
             return msj;
         }
 
+        public List<Food> buscar_comida_x_codigo(string codigo)
+        {
+            List<Food> lstComida = new List<Food>();
+
+            SqlConnection conexion = connectionDB();
+            String cadena = "SELECT CODIGO, NOMBRE_COMIDA, PRECIO, OBSERVACION, ESTADO from COMIDA WHERE codigo = " + codigo;
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader food = comando.ExecuteReader();
+            while (food.Read())
+            {
+
+                int code = int.Parse(food["CODIGO"].ToString());
+                string foodName = food["NOMBRE_COMIDA"].ToString();
+                double price = double.Parse(food["PRECIO"].ToString());
+                string observation = food["OBSERVACION"].ToString();
+                bool state = bool.Parse(food["ESTADO"].ToString());
+                Food temp = new Food(code, foodName, price, observation, state);
+
+
+                lstComida.Add(temp);
+            }
+            disconnectDB(conexion);
+            return lstComida;
+        }
+
+        public void update(List<Food> lst)
+        {
+            try
+            {
+                if (lst != null)
+                {
+                    SqlConnection conexion = connectionDB();
+                    String cadenaconex = "UPDATE COMIDA SET NOMBRE_COMIDA=@nombre_com, " +
+                        "PRECIO=@precio, OBSERVACION=@observacion, ESTADO=@estado WHERE CODIGO=@codigo";
+                    SqlCommand comand = new SqlCommand(cadenaconex, conexion);
+                    comand.Parameters.AddWithValue("@codigo", lst[0].Code);
+                    comand.Parameters.AddWithValue("@nombre_com", lst[0].FoodName);
+                    comand.Parameters.AddWithValue("@precio", lst[0].Price);
+                    comand.Parameters.AddWithValue("@observacion", lst[0].Observation);
+                    comand.Parameters.AddWithValue("@estado", lst[0].State);
+
+                    int t = Convert.ToInt32(comand.ExecuteNonQuery());
+
+                    disconnectDB(conexion);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error", ex);
+            }
+        }
+
         //Datos Ordenes----------------------------------------------------------------------------------
         public void insert_order(List<Order> lst)
         {

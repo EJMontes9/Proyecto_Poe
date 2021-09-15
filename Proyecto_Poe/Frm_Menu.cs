@@ -55,5 +55,18 @@ namespace Proyecto_Poe
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frm_FoodUpgrade actualizar = new Frm_FoodUpgrade();
+            actualizar.Show();
+            this.Close();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Frm_FoodReport reporte = new Frm_FoodReport();
+            reporte.Show();
+        }
     }
 }
