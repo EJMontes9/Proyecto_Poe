@@ -74,27 +74,27 @@ namespace Control
             {
                 case "1":
                     return listar[0].Code.ToString();
-                    break;
+                    //break;
 
                 case "2":
                     return listar[0].FoodName.ToString();
-                    break;
+                //break;
 
                 case "3":
                     return listar[0].Price.ToString();
-                    break;
+                //break;
 
                 case "4":
                     return listar[0].Observation.ToString();
-                    break;
+                //break;
 
                 case "5":
                     return listar[0].State.ToString();
-                    break;
+                //break;
 
                 default:
                     return "Dato no valido";
-                    break;
+                    //break;
             }
         }
 
