@@ -38,5 +38,12 @@ namespace Proyecto_Poe
             DgRecords.Rows.Clear();
             adm.Get().FillData(DgRecords, Int32.Parse(TxtCi.Text));
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Report_Order frm = new Report_Order();
+            frm.Show();
+        }
     }
 }
