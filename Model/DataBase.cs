@@ -210,31 +210,6 @@ namespace Model
             return lstOrder;
         }
 
-        public List<Food> buscar_comida_x_codigo(string codigo)
-        {
-            List<Food> lstComida = new List<Food>();
-
-            SqlConnection conexion = connectionDB();
-            String cadena = "SELECT CODIGO, NOMBRE_COMIDA, PRECIO, OBSERVACION, ESTADO from COMIDA WHERE codigo = " + codigo;
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            SqlDataReader food = comando.ExecuteReader();
-            while (food.Read())
-            {
-
-                int code = int.Parse(food["CODIGO"].ToString());
-                string foodName = food["NOMBRE_COMIDA"].ToString();
-                double price = double.Parse(food["PRECIO"].ToString());
-                string observation = food["OBSERVACION"].ToString();
-                bool state = bool.Parse(food["ESTADO"].ToString());
-                Food temp = new Food(code, foodName, price, observation, state);
-
-
-                lstComida.Add(temp);
-            }
-            disconnectDB(conexion);
-            return lstComida;
-        }
-
 
 
         public string delete_order(string mesa)

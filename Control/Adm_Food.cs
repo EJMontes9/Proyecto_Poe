@@ -99,36 +99,6 @@ namespace Control
             register.insert_food(lisFood);
         }
 
-        public string SearchCode(string opcion, string codigo)
-        {
-            List<Food> listar = register.buscar_comida_x_codigo(codigo);
-            switch (opcion)
-            {
-                case "1":
-                    return listar[0].Code.ToString();
-                    break;
-
-                case "2":
-                    return listar[0].FoodName.ToString();
-                    break;
-
-                case "3":
-                    return listar[0].Price.ToString();
-                    break;
-
-                case "4":
-                    return listar[0].Observation.ToString();
-                    break;
-
-                case "5":
-                    return listar[0].State.ToString();
-                    break;
-
-                default:
-                    return "Dato no valido";
-                    break;
-            }
-        }
 
         public void FillData(DataGridView DGPresentar)
         {
