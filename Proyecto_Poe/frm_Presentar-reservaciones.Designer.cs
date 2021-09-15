@@ -39,6 +39,7 @@ namespace Proyecto_Poe
             this.label1 = new System.Windows.Forms.Label();
             this.btRegresar = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.bt_Imprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +54,14 @@ namespace Proyecto_Poe
             this.personas,
             this.ubicacion,
             this.sugerencia});
-            this.dataGridView1.Location = new System.Drawing.Point(27, 75);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 92);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(546, 170);
+            this.dataGridView1.Size = new System.Drawing.Size(728, 209);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -111,10 +112,9 @@ namespace Proyecto_Poe
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(234, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(312, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 29);
+            this.label1.Size = new System.Drawing.Size(195, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reservaciones";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -124,10 +124,10 @@ namespace Proyecto_Poe
             this.btRegresar.BackColor = System.Drawing.Color.Goldenrod;
             this.btRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btRegresar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRegresar.Location = new System.Drawing.Point(344, 276);
-            this.btRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btRegresar.Location = new System.Drawing.Point(480, 340);
+            this.btRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btRegresar.Name = "btRegresar";
-            this.btRegresar.Size = new System.Drawing.Size(88, 31);
+            this.btRegresar.Size = new System.Drawing.Size(117, 38);
             this.btRegresar.TabIndex = 2;
             this.btRegresar.Text = "Regresar";
             this.btRegresar.UseVisualStyleBackColor = false;
@@ -138,29 +138,44 @@ namespace Proyecto_Poe
             this.btnDelete.BackColor = System.Drawing.Color.LightCoral;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(170, 276);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(186, 340);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(88, 31);
+            this.btnDelete.Size = new System.Drawing.Size(117, 38);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // bt_Imprimir
+            // 
+            this.bt_Imprimir.BackColor = System.Drawing.Color.Goldenrod;
+            this.bt_Imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_Imprimir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Imprimir.Location = new System.Drawing.Point(332, 340);
+            this.bt_Imprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_Imprimir.Name = "bt_Imprimir";
+            this.bt_Imprimir.Size = new System.Drawing.Size(117, 38);
+            this.bt_Imprimir.TabIndex = 4;
+            this.bt_Imprimir.Text = "Imprimir";
+            this.bt_Imprimir.UseVisualStyleBackColor = false;
+            this.bt_Imprimir.Click += new System.EventHandler(this.bt_Imprimir_Click);
+            // 
             // frm_Presentar_reservaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 340);
+            this.ClientSize = new System.Drawing.Size(800, 418);
+            this.Controls.Add(this.bt_Imprimir);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btRegresar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frm_Presentar_reservaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -182,5 +197,6 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btRegresar;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button bt_Imprimir;
     }
 }
