@@ -41,9 +41,7 @@ namespace Proyecto_Poe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Report_Order frm = new Report_Order();
-            frm.Show();
+            
         }
     }
 }

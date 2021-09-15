@@ -127,12 +127,6 @@
     <Compile Include="Frm_Reserva.Designer.cs">
       <DependentUpon>Frm_Reserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="Orden.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Orden.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CrystalFoodReport.rpt">
@@ -172,10 +166,6 @@
     <EmbeddedResource Include="Frm_Reserva.resx">
       <DependentUpon>Frm_Reserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Orden.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Orden.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -185,9 +175,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report_Order.resx">
-      <DependentUpon>Report_Order.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
