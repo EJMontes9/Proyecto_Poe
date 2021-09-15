@@ -50,7 +50,7 @@ namespace Proyecto_Poe
             }
             catch(Exception)
             {
-                MessageBox.Show("Reelene todos los campos primero");
+                MessageBox.Show("Rellene todos los campos primero");
             }
         }
 

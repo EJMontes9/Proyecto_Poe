@@ -31,18 +31,22 @@ namespace Proyecto_Poe
             String Direccion = txtDireccion.Text;
             String Contra = txtContra.Text;
 
-            adm_user.Get().Registro(ci, Nombre, Apellido, Telefono, Correo, Ciudad, Direccion, Contra);
-
-            MessageBox.Show("Usuario registrado exitosamente");
-
-            txtCedula.Text = "";
-            txtNombres.Text = "";
-            txtApellidos.Text = "";
-            txtTelefono.Text = "";
-            txtCorreo.Text = "";
-            txtCiudad.Text = "";
-            txtDireccion.Text = "";
-            txtContra.Text = "";
+            if (adm_user.Get().Registro(ci, Nombre, Apellido, Telefono, Correo, Ciudad, Direccion, Contra))
+            {
+                MessageBox.Show("Usuario registrado exitosamente");
+                txtCedula.Text = "";
+                txtNombres.Text = "";
+                txtApellidos.Text = "";
+                txtTelefono.Text = "";
+                txtCorreo.Text = "";
+                txtCiudad.Text = "";
+                txtDireccion.Text = "";
+                txtContra.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Usuario no registrado");
+            }
         }
 
         private void cmdRegresar_Click(object sender, EventArgs e)

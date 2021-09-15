@@ -12,6 +12,8 @@ namespace Control
     {
         List<Reservation> listreservacion = new List<Reservation>();
         private static Adm_Reservation adm = null;
+        DataBase reserva = new DataBase();
+
         public static Adm_Reservation getAdm()
         {
             if (adm == null)
@@ -34,19 +36,20 @@ namespace Control
         {
             Reservation obj = new Reservation(name, dateandTime, people, location, suggestion);
             listreservacion.Add(obj);
+            reserva.insert_reservation(listreservacion);
         }
 
         public void FillData(DataGridView DGPresentar)
         {
-            foreach (var a in listreservacion)
+            foreach (var a in reserva.list_reservation())
             {
                 DGPresentar.Rows.Add(a.Name, a.DateandTime, a.People, a.Location, a.Suggestion);
             }
         }
 
-        public void Eliminar(int eliminar)
+        public void Eliminar(string eliminar)
         {
-            listreservacion.RemoveAt(eliminar);
+            MessageBox.Show(reserva.delete_reserv(eliminar));
         }
     }
 }
