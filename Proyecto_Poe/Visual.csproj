@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsValidations.cs" />
+    <Compile Include="CrystalFoodReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalFoodReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Frm_ClientRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +71,18 @@
     </Compile>
     <Compile Include="Frm_FoodRegistrer.Designer.cs">
       <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_FoodReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_FoodReport.Designer.cs">
+      <DependentUpon>Frm_FoodReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_FoodUpgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_FoodUpgrade.Designer.cs">
+      <DependentUpon>Frm_FoodUpgrade.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_MenuOpciones.cs">
       <SubType>Form</SubType>
@@ -104,11 +129,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalFoodReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalFoodReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_ClientRegister.resx">
       <DependentUpon>Frm_ClientRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_FoodRegistrer.resx">
       <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_FoodReport.resx">
+      <DependentUpon>Frm_FoodReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_FoodUpgrade.resx">
+      <DependentUpon>Frm_FoodUpgrade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuOpciones.resx">
       <DependentUpon>Frm_MenuOpciones.cs</DependentUpon>
@@ -158,10 +193,9 @@
       <Project>{909cb1f6-e259-488a-b217-27683fd2cfd1}</Project>
       <Name>Control</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{8B548F62-A0E3-40F8-890E-6ADC336540DD}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

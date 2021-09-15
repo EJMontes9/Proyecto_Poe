@@ -40,6 +40,7 @@ namespace Proyecto_Poe
 
             TxtCi.Text = "";
             TxtPassword.Text = "";
+
         }
 
         private void TxtCi_KeyPress(object sender, KeyPressEventArgs e)

@@ -47,10 +47,12 @@ namespace Proyecto_Poe
                 txtObservacion.Text = "";
                 rdButtonDisponible.Checked = false;
                 rdButtonNoDisponible.Checked = false;
+
+                MessageBox.Show("Registrado en la Base de Datos");
             }
             catch(Exception)
             {
-                MessageBox.Show("Reelene todos los campos primero");
+                MessageBox.Show("Rellene todos los campos primero");
             }
         }
 
@@ -70,5 +72,6 @@ namespace Proyecto_Poe
         {
             validar.Only_Letters(sender, e);
         }
+
     }
 }

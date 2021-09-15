@@ -12,6 +12,7 @@ namespace Control
     {
         List<Order> lisOrder = new List<Order>();
         private static Adm_Order adm = null;
+        DataBase based = new DataBase();
 
         public Adm_Order()
         {
@@ -40,11 +41,12 @@ namespace Control
         {
             Order obj = new Order(comorder, client, table, totPay);
             lisOrder.Add(obj);
+            based.insert_order(lisOrder);
         }
         
         public void FillData(DataGridView DGPresentar)
         {
-            foreach (var a in lisOrder)
+            foreach (var a in based.list_order())
             {
                 DGPresentar.Rows.Add(a.Comorder, a.Client, a.Table, a.TotPay);
             }
@@ -52,7 +54,7 @@ namespace Control
 
         public void FillData(DataGridView DGPresentar,int table)
         {
-            foreach (var a in lisOrder)
+            foreach (var a in based.list_order())
             {
                 if (table == a.Table)
                 {

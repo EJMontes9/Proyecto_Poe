@@ -15,6 +15,8 @@ namespace Proyecto_Poe
     {
         Adm_Food food = Adm_Food.getAdm();
         int eliminar;
+        string capture; 
+
         public Frm_Menu()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace Proyecto_Poe
         {
             eliminar = 0;
             eliminar = Int32.Parse(dgvConsultarComida.CurrentCell.RowIndex.ToString());
+            capture = dgvConsultarComida.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -43,14 +46,27 @@ namespace Proyecto_Poe
             {
                 try
                 {
-                    dgvConsultarComida.Rows.RemoveAt(eliminar);
-                    food.Get().deleteData(eliminar);
+                dgvConsultarComida.Rows.RemoveAt(eliminar);
+                    food.Get().deleteData(capture);
                 }
                 catch (ArgumentOutOfRangeException)
                 {
                     MessageBox.Show("Primero seleccione una fila a eliminar");
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frm_FoodUpgrade actualizar = new Frm_FoodUpgrade();
+            actualizar.Show();
+            this.Close();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Frm_FoodReport reporte = new Frm_FoodReport();
+            reporte.Show();
         }
     }
 }

@@ -12,10 +12,13 @@ namespace Control
     {
         List<User> lisClient = new List<User>();
         private static Adm_User adm = null;
+        DataBase usuario = new DataBase();
+        
+        //Usuario Default
         public Adm_User()
         {
-            User a = new User("0987654321", "a", "a", "0999999999", "email", "city ", "direction", "1111");
-            lisClient.Add(a);
+            //User a = new User("0987654321", "a", "a", "0999999999", "email", "city ", "direction", "1111");
+            //lisClient.Add(a);
         }
 
         public static Adm_User getAdm()
@@ -38,7 +41,7 @@ namespace Control
 
         public Boolean IniciarSesion(String ci, String password)
         {
-            foreach (var a in lisClient)
+            foreach (var a in usuario.list_user())
             {
                 if (a.Ci == ci)
                 {
@@ -53,7 +56,7 @@ namespace Control
 
         public string NameClient(string ci)
         {
-            foreach (User a in lisClient)
+            foreach (User a in usuario.list_user())
             {
                 if (ci == a.Ci)
                 {
@@ -63,10 +66,28 @@ namespace Control
             return "0000000000";
         }
 
-        public void Registro(string ci, string name, string lastName, string phone, string email, string city, string direction, string password)
+        public bool UsuerRepeat(string ci)
+        {
+            foreach (User a in usuario.list_user())
+            {
+                if (ci == a.Ci)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool Registro(string ci, string name, string lastName, string phone, string email, string city, string direction, string password)
         {
             User obj = new User(ci, name, lastName, phone, email, city, direction, password);
-            lisClient.Add(obj);
+            if (!UsuerRepeat(ci))
+            {
+                lisClient.Add(obj);
+                usuario.insert_user(lisClient);
+                return true;
+            }
+            return false;
         }
 
         public void deleteData(int eliminar)
