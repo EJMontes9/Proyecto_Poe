@@ -76,8 +76,10 @@ namespace Proyecto_Poe
                         MessageBox.Show("PORFAVOR SELECCIONE LUGAR DE MESA");
                     }
                     txtNombreReserva.Text = "";
-                    cmbNumPersonas.Text = "";
-                    cmbNumPersonas.Text = "";
+                    cmbNumPersonas.Text = null;
+                    rdButtonCentro.Checked = false;
+                    rdButtonPuerta.Checked = false;
+                    rdButtonVentana.Checked = false;
                     txtSugerencias.Text = "";
                 }
                 else
