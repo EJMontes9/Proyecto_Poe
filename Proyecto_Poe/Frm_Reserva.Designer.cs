@@ -222,7 +222,7 @@ namespace Proyecto_Poe
             // 
             // dateReserva
             // 
-            this.dateReserva.CustomFormat = "dd/MM/yyyy hh:mm";
+            this.dateReserva.CustomFormat = "dd/MM/yyyy";
             this.dateReserva.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateReserva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateReserva.Location = new System.Drawing.Point(319, 171);

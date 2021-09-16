@@ -37,28 +37,58 @@ namespace Proyecto_Poe
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombreReserva.Text;
-            DateTime fecha = dateReserva.Value;
-            int npersona = Int32.Parse(cmbNumPersonas.Text);
-            string mesa;
-            if (rdButtonVentana.Checked)
+            try
             {
-                mesa = "Vista a la Ventana";
+                if (txtNombreReserva.Text != "")
+                {
+                    string nombre = txtNombreReserva.Text;
+                    DateTime fecha = dateReserva.Value;
+                    int npersona = Int32.Parse(cmbNumPersonas.Text);
+                    string mesa = "";
+                    if (rdButtonVentana.Checked)
+                    {
+                        mesa = "Vista a la Ventana";
+                    }
+                    else if (rdButtonCentro.Checked)
+                    {
+                        mesa = "Centro del Restaurante";
+                    }
+                    else if (rdButtonPuerta.Checked)
+                    {
+                        mesa = "Cerca de la Puerta";
+                    }
+                    string sugerencia = txtSugerencias.Text;
+                    if (mesa != "")
+                    {
+                        if (adm.tiempo(fecha) < 7)
+                        {
+                            adm.tiempo(fecha);
+                            reservation.Get().Registro(nombre, fecha, npersona, mesa, sugerencia);
+                            MessageBox.Show("RESERVA EXITOSA");
+                        }
+                        else
+                        {
+                            MessageBox.Show("NO HAY MESAS DISPONIBLES");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("PORFAVOR SELECCIONE LUGAR DE MESA");
+                    }
+                    txtNombreReserva.Text = "";
+                    cmbNumPersonas.Text = "";
+                    cmbNumPersonas.Text = "";
+                    txtSugerencias.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("PORFAVOR INSERTE DATOS");
+                }
             }
-            else if (rdButtonCentro.Checked)
+            catch(FormatException)
             {
-                mesa = "Centro del Restaurante";
+                MessageBox.Show("PORFAVOR LLENE DATOS");
             }
-            else
-            {
-                mesa = "Cerca de la Puerta";
-            }
-            string sugerencia = txtSugerencias.Text;
-            reservation.Get().Registro(nombre, fecha, npersona, mesa, sugerencia);
-
-            txtNombreReserva.Text = "";
-            cmbNumPersonas.Text = "";
-            txtSugerencias.Text = "";
         }
 
         private void txtNombreReserva_TextChanged(object sender, EventArgs e)

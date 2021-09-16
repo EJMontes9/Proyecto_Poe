@@ -363,12 +363,35 @@ namespace Model
             }
         }
 
+
         public List<Reservation> list_reservation()
         {
             List<Reservation> lstReser = new List<Reservation>();
 
             SqlConnection conexion = connectionDB();
             String cadenaconec = "SELECT NOMBRE, FECHA_HORA, NUMERO_PERSONAS, UBICACION, SUGERENCIA from RESERVACION";
+            SqlCommand comando = new SqlCommand(cadenaconec, conexion);
+            SqlDataReader reser = comando.ExecuteReader();
+            while (reser.Read())
+            {
+                string nombre = reser["NOMBRE"].ToString();
+                DateTime fecha = DateTime.Parse(reser["FECHA_HORA"].ToString());
+                int numero = int.Parse(reser["NUMERO_PERSONAS"].ToString());
+                string ubicacion = reser["UBICACION"].ToString();
+                string sugerencia = reser["SUGERENCIA"].ToString();
+                Reservation temp = new Reservation(nombre, fecha, numero, ubicacion, sugerencia);
+
+                lstReser.Add(temp);
+            }
+            disconnectDB(conexion);
+            return lstReser;
+        }
+
+        public List<Reservation> consulta_reservation(string fech)
+        {
+            List<Reservation> lstReser = new List<Reservation>();
+            SqlConnection conexion = connectionDB();
+            String cadenaconec = "SELECT NOMBRE, FECHA_HORA, NUMERO_PERSONAS, UBICACION, SUGERENCIA from RESERVACION WHERE FECHA_HORA BETWEEN '" + fech + " 00:00:00.0000000' AND '"+fech+ " 23:59:59.9999999' ";
             SqlCommand comando = new SqlCommand(cadenaconec, conexion);
             SqlDataReader reser = comando.ExecuteReader();
             while (reser.Read())

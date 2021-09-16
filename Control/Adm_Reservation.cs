@@ -52,5 +52,13 @@ namespace Control
         {
             MessageBox.Show(reserva.delete_reserv(eliminar));
         }
+
+        public int tiempo(DateTime tiempo)
+        {
+            string fecha = tiempo.ToString("yyyy-MM-dd");
+            DataBase bd = new DataBase();
+            return bd.consulta_reservation(fecha).Count;
+
+        }
     }
 }
