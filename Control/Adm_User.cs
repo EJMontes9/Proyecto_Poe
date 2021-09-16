@@ -10,7 +10,7 @@ namespace Control
 {
     public class Adm_User
     {
-        List<User> lisClient = new List<User>();
+        
         private static Adm_User adm = null;
         DataBase usuario = new DataBase();
         String actual_user;
@@ -133,6 +133,7 @@ namespace Control
 
         public bool Registro(string ci, string name, string lastName, string phone, string email, string city, string direction, string password)
         {
+            List<User> lisClient = new List<User>();
             User obj = new User(ci, name, lastName, phone, email, city, direction, password);
             if (!UsuerRepeat(ci))
             {
@@ -145,6 +146,7 @@ namespace Control
 
         public bool Update_user(string ci, string name, string lastName, string phone, string email, string city, string direction, string password)
         {
+            List<User> lisClient = new List<User>();
             User obj = new User(ci, name, lastName, phone, email, city, direction, password);
                 lisClient.Add(obj);
                 usuario.update_User(lisClient);
@@ -153,6 +155,7 @@ namespace Control
 
         public void deleteData(int eliminar)
         {
+            List<User> lisClient = new List<User>();
             lisClient.RemoveAt(eliminar);
         }
 
