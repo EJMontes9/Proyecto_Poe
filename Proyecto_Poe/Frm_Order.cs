@@ -29,6 +29,7 @@ namespace Proyecto_Poe
         {
             try
             {
+                string aux = TxtCod.Text;
                 int code = Int32.Parse(TxtCod.Text);
                 int amount = Int32.Parse(TxtAmount.Text);
                 double Price = amdfood.Get().Price(code);
@@ -39,9 +40,16 @@ namespace Proyecto_Poe
                 }
                 else
                 {
-                    DgOrder.Rows.Add(code, amdfood.Get().NameFood(code), amount, amdfood.Get().Price(code), Tot);
-                    TotPay = TotPay + Tot;
-                    LaTot.Text = TotPay.ToString("0.00");
+                    if (Boolean.Parse(amdfood.SearchCode("5", TxtCod.Text))){
+                        DgOrder.Rows.Add(code, amdfood.Get().NameFood(code), amount, amdfood.Get().Price(code), Tot);
+                        TotPay = TotPay + Tot;
+                        LaTot.Text = TotPay.ToString("0.00");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Producto no disponible");
+                    }
+                    
                 }
 
                 TxtAmount.Text = "";

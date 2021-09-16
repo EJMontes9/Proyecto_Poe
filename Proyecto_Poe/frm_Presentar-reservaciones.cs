@@ -63,5 +63,11 @@ namespace Proyecto_Poe
             eliminar = Int32.Parse(dataGridView1.CurrentCell.RowIndex.ToString());
             capture = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
+
+        private void bt_Imprimir_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Reserva fmr = new Frm_Reporte_Reserva();
+            fmr.Show();
+        }
     }
 }

@@ -59,5 +59,10 @@ namespace Proyecto_Poe
             cmbNumPersonas.Text = "";
             txtSugerencias.Text = "";
         }
+
+        private void txtNombreReserva_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
