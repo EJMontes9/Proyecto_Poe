@@ -60,6 +60,12 @@
       <DependentUpon>CrystalFoodReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Frm_UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_UpdateUser.Designer.cs">
+      <DependentUpon>Frm_UpdateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ClientRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Reserva.resx">
       <DependentUpon>Frm_Reserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_UpdateUser.resx">
+      <DependentUpon>Frm_UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

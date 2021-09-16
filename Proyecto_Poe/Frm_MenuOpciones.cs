@@ -76,9 +76,10 @@ namespace Proyecto_Poe
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            Frm_EditarUsuario frm = new Frm_EditarUsuario();
+            Frm_UpdateUser frm = new Frm_UpdateUser();
             frm.Show();
             this.Visible = false;
+          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -301,6 +301,39 @@ namespace Model
             disconnectDB(conexion);
             return lstUser;
         }
+        public void update_User(List<User> lst)
+        {
+           try
+           {
+                if (lst != null)
+                {
+                    SqlConnection conexion = connectionDB();
+                    String cadenauser = "UPDATE USUARIO SET NOMBRE=@nombre, APELLIDO=@apellido," +
+                        "TELEFONO=@telefono, CORREO=@correo, CIUDAD=@ciudad, DIRECCION=@direccion," +
+                        "CONTRASEÑA=@contraseña WHERE CEDULA=@cedula";
+                    SqlCommand comand = new SqlCommand(cadenauser, conexion);
+                    comand.Parameters.AddWithValue("@cedula", lst[0].Ci);
+                    comand.Parameters.AddWithValue("@nombre", lst[0].Name);
+                    comand.Parameters.AddWithValue("@apellido", lst[0].LastName);
+                    comand.Parameters.AddWithValue("@telefono", lst[0].Phone);
+                    comand.Parameters.AddWithValue("@correo", lst[0].Email);
+                    comand.Parameters.AddWithValue("@ciudad", lst[0].City);
+                    comand.Parameters.AddWithValue("@direccion", lst[0].Direction);
+                    comand.Parameters.AddWithValue("@contraseña", lst[0].Password);
+
+                    int t = Convert.ToInt32(comand.ExecuteNonQuery());
+
+                    disconnectDB(conexion);
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar datos", ex);
+            }
+        }
 
 
         //Datos Reservacion----------------------------------------------------------------------------------
