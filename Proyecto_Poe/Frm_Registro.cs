@@ -14,6 +14,7 @@ namespace Proyecto_Poe
     public partial class Frm_Registro : Form
     {
         Adm_Order adm = Adm_Order.getAdm();
+        int i;
         public Frm_Registro()
         {
             InitializeComponent();
@@ -41,7 +42,37 @@ namespace Proyecto_Poe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Frm_ReporteOrder frm = new Frm_ReporteOrder();
+            frm.Show();
+        }
+
+        private void DgRecords_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            i = 0;
+            i = Int32.Parse(DgRecords.CurrentCell.RowIndex.ToString());
+        }
+
+        private void BtDelete_Click(object sender, EventArgs e)
+        {
+            bool removeFoo;
+            if (DgRecords.CurrentCell != null)
+            {
+                string ndelete = DgRecords.CurrentRow.Cells[1].Value.ToString();
+                try
+                {
+                    DgRecords.Rows.RemoveAt(i);
+                    adm.eliminar(ndelete);
+
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("Escoja el dato que desea eliminar");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existen datos para eliminar ");
+            }
         }
     }
 }

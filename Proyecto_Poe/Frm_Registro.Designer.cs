@@ -42,6 +42,7 @@ namespace Proyecto_Poe
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.BtDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgRecords)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,6 @@ namespace Proyecto_Poe
             // 
             this.DgRecords.AllowUserToAddRows = false;
             this.DgRecords.AllowUserToDeleteRows = false;
-            this.DgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,6 +69,7 @@ namespace Proyecto_Poe
             this.DgRecords.ReadOnly = true;
             this.DgRecords.Size = new System.Drawing.Size(595, 216);
             this.DgRecords.TabIndex = 0;
+            this.DgRecords.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgRecords_CellClick);
             // 
             // orderComplete
             // 
@@ -171,6 +172,21 @@ namespace Proyecto_Poe
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // BtDelete
+            // 
+            this.BtDelete.BackColor = System.Drawing.Color.IndianRed;
+            this.BtDelete.FlatAppearance.BorderSize = 0;
+            this.BtDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtDelete.ForeColor = System.Drawing.Color.Black;
+            this.BtDelete.Location = new System.Drawing.Point(135, 356);
+            this.BtDelete.Name = "BtDelete";
+            this.BtDelete.Size = new System.Drawing.Size(104, 27);
+            this.BtDelete.TabIndex = 26;
+            this.BtDelete.Text = "Eliminar";
+            this.BtDelete.UseVisualStyleBackColor = false;
+            this.BtDelete.Click += new System.EventHandler(this.BtDelete_Click);
+            // 
             // Frm_Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +195,7 @@ namespace Proyecto_Poe
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(662, 407);
+            this.Controls.Add(this.BtDelete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -210,5 +227,6 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtDelete;
     }
 }

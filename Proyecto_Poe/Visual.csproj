@@ -60,6 +60,12 @@
       <DependentUpon>CrystalFoodReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Frm_ReporteOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ReporteOrder.Designer.cs">
+      <DependentUpon>Frm_ReporteOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reserva.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -181,6 +193,9 @@
     <EmbeddedResource Include="Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ReporteOrder.resx">
+      <DependentUpon>Frm_ReporteOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Reporte_Reserva.resx">
       <DependentUpon>Frm_Reporte_Reserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +214,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReporteOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteOrder.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reserva.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Reserva.cs</LastGenOutput>

@@ -115,6 +115,7 @@ namespace Control
                     return a.Ci;
                 }
             }
+            MessageBox.Show("Usuario no registrado, Se procedera hacer la orden como consumidor final");
             return "0000000000";
         }
 

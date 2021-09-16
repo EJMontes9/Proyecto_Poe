@@ -10,13 +10,12 @@ namespace Control
 {
     public class Adm_Order
     {
-        List<Order> lisOrder = new List<Order>();
         private static Adm_Order adm = null;
         DataBase based = new DataBase();
 
-        public Adm_Order()
+        public void eliminar (string cedula)
         {
-            lisOrder = new List<Order>();
+            MessageBox.Show(based.delete_order(cedula));
         }
 
         public static Adm_Order getAdm()
@@ -39,6 +38,7 @@ namespace Control
 
         public void Registro(string comorder, string client, int table, double totPay)
         {
+            List<Order> lisOrder = new List<Order>();
             Order obj = new Order(comorder, client, table, totPay);
             lisOrder.Add(obj);
             based.insert_order(lisOrder);

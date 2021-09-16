@@ -184,7 +184,7 @@ namespace Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error", ex);
+                Console.WriteLine("Error"+ ex);
             }
         }
 
@@ -210,19 +210,19 @@ namespace Model
             return lstOrder;
         }
 
-        public string delete_order(string mesa)
+        public string delete_order(string Cliente)
         {
             string msj = null;
             try
             {
                 SqlConnection conexion = connectionDB();
-                String delete = "DELETE ORDEN  WHERE MESA = @MESA";
+                String delete = "DELETE ORDEN  WHERE CLIENTE = @CLIENTE";
                 SqlCommand comando = new SqlCommand(delete, conexion);
 
-                comando.Parameters.AddWithValue("MESA", mesa);
+                comando.Parameters.AddWithValue("CLIENTE", Cliente);
 
                 int resultado = comando.ExecuteNonQuery();
-                if (resultado == 1)
+                if (resultado >= 1)
                 {
                     msj = "Registro Eliminado";
                 }
