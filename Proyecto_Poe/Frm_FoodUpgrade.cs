@@ -41,7 +41,7 @@ namespace Proyecto_Poe
                 txtNombreComida.Text = comida.SearchCode("2", codigo);
                 txtPrecioComida.Text = comida.SearchCode("3", codigo);
                 txtObservacion.Text = comida.SearchCode("4", codigo);
-                if(Boolean.Parse(comida.SearchCode("5", codigo)))
+                if (Boolean.Parse(comida.SearchCode("5", codigo)))
                 {
                     rdButtonDisponible.Checked = true;
                 }
@@ -58,29 +58,39 @@ namespace Proyecto_Poe
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            int codigo = int.Parse(txtCodigo.Text);
-            String nombre = txtNombreComida.Text;
-            double precio = double.Parse(txtPrecioComida.Text);
-            String observacion = txtObservacion.Text;
-            bool estado;
-
-            if (rdButtonDisponible.Checked)
+            try
             {
-                estado = true;
+                int codigo = int.Parse(txtCodigo.Text);
+                String nombre = txtNombreComida.Text;
+                double precio = double.Parse(txtPrecioComida.Text);
+                String observacion = txtObservacion.Text;
+                bool estado;
+
+                if (rdButtonDisponible.Checked)
+                {
+                    estado = true;
+                }
+                else
+                {
+                    estado = false;
+                }
+
+                comida.update(codigo, nombre, precio, observacion, estado);
+
+                txtCodigo.Text = "";
+                txtNombreComida.Text = "";
+                txtPrecioComida.Text = "";
+                txtObservacion.Text = "";
+                rdButtonDisponible.Checked = false;
+                rdButtonNoDisponible.Checked = false;
+
+
+                MessageBox.Show("Datos Actualizados con éxito");
             }
-            else
+            catch (Exception)
             {
-                estado = false;
+                MessageBox.Show("Rellene todos los campos primero");
             }
-
-            comida.update(codigo, nombre, precio, observacion, estado);
-
-            txtCodigo.Text = "";
-            txtNombreComida.Text = "";
-            txtPrecioComida.Text = "";
-            txtObservacion.Text = "";
-            rdButtonDisponible.Checked = false;
-            rdButtonNoDisponible.Checked = false;
         }
     }
 }

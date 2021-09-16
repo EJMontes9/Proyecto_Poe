@@ -10,7 +10,6 @@ namespace Control
 {
     public class Adm_Food
     {
-        List<Food> lisFood = new List<Food>();
         DataBase register = new DataBase();
         private static Adm_Food adm = null;
 
@@ -94,6 +93,7 @@ namespace Control
 
         public void Register(int code, string foodName, double price, string observacion, bool state)
         {
+            List<Food> lisFood = new List<Food>();
             Food obj = new Food(code, foodName, price, observacion, state);
             lisFood.Add(obj);
             register.insert_food(lisFood);
@@ -119,6 +119,7 @@ namespace Control
 
         public void update(int code, string foodName, double price, string observacion, bool state)
         {
+            List<Food> lisFood = new List<Food>();
             Food obj = new Food(code, foodName, price, observacion, state);
             lisFood.Add(obj);
             register.update(lisFood);

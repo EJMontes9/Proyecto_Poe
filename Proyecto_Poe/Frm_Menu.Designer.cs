@@ -64,8 +64,8 @@ namespace Proyecto_Poe
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(742, 385);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(744, 385);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 37);
             this.button1.TabIndex = 19;
@@ -75,12 +75,15 @@ namespace Proyecto_Poe
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackColor = System.Drawing.Color.PeachPuff;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(247, 384);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.ForeColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(250, 385);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 33);
+            this.button3.Size = new System.Drawing.Size(141, 37);
             this.button3.TabIndex = 22;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = false;
@@ -98,7 +101,7 @@ namespace Proyecto_Poe
             this.observacion,
             this.estado});
             this.dgvConsultarComida.Location = new System.Drawing.Point(101, 101);
-            this.dgvConsultarComida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvConsultarComida.Margin = new System.Windows.Forms.Padding(4);
             this.dgvConsultarComida.Name = "dgvConsultarComida";
             this.dgvConsultarComida.ReadOnly = true;
             this.dgvConsultarComida.RowHeadersWidth = 51;
@@ -153,10 +156,10 @@ namespace Proyecto_Poe
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(101, 383);
+            this.button2.Location = new System.Drawing.Point(101, 385);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 33);
+            this.button2.Size = new System.Drawing.Size(141, 37);
             this.button2.TabIndex = 23;
             this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = false;
@@ -164,12 +167,12 @@ namespace Proyecto_Poe
             // 
             // btnImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.White;
+            this.btnImprimir.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(620, 385);
+            this.btnImprimir.Location = new System.Drawing.Point(622, 385);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(114, 37);
@@ -194,7 +197,7 @@ namespace Proyecto_Poe
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
