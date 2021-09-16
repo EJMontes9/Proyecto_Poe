@@ -13,6 +13,7 @@ namespace Control
         List<User> lisClient = new List<User>();
         private static Adm_User adm = null;
         DataBase usuario = new DataBase();
+        String actual_user;
         
         //Usuario Default
         public Adm_User()
@@ -47,11 +48,62 @@ namespace Control
                 {
                     if (a.Password == password)
                     {
+                        actual_user = ci;
                         return true;
                     }
                 }
             }
             return false;
+        }
+
+        public string GetActual_User()
+        {
+            return actual_user;
+        }
+
+        public string Obtener_Usuario(String ci, String opcion)
+        {
+            foreach (var a in usuario.list_user())
+            {
+                if (a.Ci == ci)
+                {
+                    switch (opcion)
+                    {
+                        case "1":
+                            return a.Ci;
+
+                        case "2":
+                            return a.Name;
+
+                        case "3":
+                            return a.LastName;
+
+                        case "4":
+                            return a.Phone;
+
+                        case "5":
+                            return a.Email;
+
+                        case "6":
+                            return a.City;
+
+                        case "7":
+                            return a.Direction;
+
+                        case "8":
+                            return a.Password;
+
+                        default:
+                            return "No se cargaron los datos";
+
+                    }
+    
+                }
+                
+                    
+            }
+            return "Cedula no encontrada";
+
         }
 
         public string NameClient(string ci)
@@ -88,6 +140,14 @@ namespace Control
                 return true;
             }
             return false;
+        }
+
+        public bool Update_user(string ci, string name, string lastName, string phone, string email, string city, string direction, string password)
+        {
+            User obj = new User(ci, name, lastName, phone, email, city, direction, password);
+                lisClient.Add(obj);
+                usuario.update_User(lisClient);
+                return true;
         }
 
         public void deleteData(int eliminar)
