@@ -32,6 +32,7 @@ namespace Proyecto_Poe
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MenuOpciones));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUsuario = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -66,6 +67,7 @@ namespace Proyecto_Poe
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnUsuario);
             this.panel1.Controls.Add(this.btnConsulta);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -79,6 +81,18 @@ namespace Proyecto_Poe
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(690, 456);
             this.panel1.TabIndex = 2;
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.BackgroundImage = global::Proyecto_Poe.Properties.Resources.usuario;
+            this.btnUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUsuario.Location = new System.Drawing.Point(589, 9);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(86, 67);
+            this.btnUsuario.TabIndex = 11;
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnConsulta
             // 
@@ -155,6 +169,7 @@ namespace Proyecto_Poe
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -244,5 +259,6 @@ namespace Proyecto_Poe
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Button btnUsuario;
     }
 }

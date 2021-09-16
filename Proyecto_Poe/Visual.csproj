@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsValidations.cs" />
+    <Compile Include="Frm_EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EditarUsuario.Designer.cs">
+      <DependentUpon>Frm_EditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ClientRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <EmbeddedResource Include="Frm_ClientRegister.resx">
       <DependentUpon>Frm_ClientRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_EditarUsuario.resx">
+      <DependentUpon>Frm_EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_FoodRegistrer.resx">
       <DependentUpon>Frm_FoodRegistrer.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +148,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -158,10 +168,9 @@
       <Project>{909cb1f6-e259-488a-b217-27683fd2cfd1}</Project>
       <Name>Control</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{8B548F62-A0E3-40F8-890E-6ADC336540DD}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

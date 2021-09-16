@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Food.cs" />

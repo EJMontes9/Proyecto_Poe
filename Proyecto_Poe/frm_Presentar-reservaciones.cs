@@ -13,6 +13,7 @@ namespace Proyecto_Poe
 {
     public partial class frm_Presentar_reservaciones : Form
     {
+        string capture;
         Adm_Reservation reserva = Adm_Reservation.getAdm();
 
         public frm_Presentar_reservaciones()
@@ -41,7 +42,7 @@ namespace Proyecto_Poe
                 try
                 {
                     dataGridView1.Rows.RemoveAt(eliminar);
-                    reserva.Get().Eliminar(eliminar);
+                    reserva.Get().Eliminar(capture);
                 }
                 catch (ArgumentOutOfRangeException)
                 {
@@ -60,6 +61,7 @@ namespace Proyecto_Poe
         {
             eliminar = 0;
             eliminar = Int32.Parse(dataGridView1.CurrentCell.RowIndex.ToString());
+            capture = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }

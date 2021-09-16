@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -71,6 +72,18 @@ namespace Proyecto_Poe
             frm_Presentar_reservaciones frm = new frm_Presentar_reservaciones();
             frm.Show();
             this.Visible = false;
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            Frm_EditarUsuario frm = new Frm_EditarUsuario();
+            frm.Show();
+            this.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
