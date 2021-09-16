@@ -227,11 +227,11 @@ namespace Proyecto_Poe
             this.dateReserva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateReserva.Location = new System.Drawing.Point(319, 171);
             this.dateReserva.Margin = new System.Windows.Forms.Padding(4);
-            this.dateReserva.MinDate = new System.DateTime(2021, 7, 20, 0, 0, 0, 0);
+            this.dateReserva.MinDate = new System.DateTime(2021, 9, 15, 0, 0, 0, 0);
             this.dateReserva.Name = "dateReserva";
             this.dateReserva.Size = new System.Drawing.Size(285, 26);
             this.dateReserva.TabIndex = 15;
-            this.dateReserva.Value = new System.DateTime(2021, 7, 20, 0, 0, 0, 0);
+            this.dateReserva.Value = new System.DateTime(2021, 9, 15, 0, 0, 0, 0);
             // 
             // label7
             // 

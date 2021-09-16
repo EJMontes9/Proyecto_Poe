@@ -10,7 +10,7 @@ namespace Control
 {
     public class Adm_Reservation
     {
-        List<Reservation> listreservacion = new List<Reservation>();
+        
         private static Adm_Reservation adm = null;
         DataBase reserva = new DataBase();
 
@@ -34,6 +34,7 @@ namespace Control
 
         public void Registro(string name, DateTime dateandTime, int people, string location, string suggestion)
         {
+            List<Reservation> listreservacion = new List<Reservation>();
             Reservation obj = new Reservation(name, dateandTime, people, location, suggestion);
             listreservacion.Add(obj);
             reserva.insert_reservation(listreservacion);

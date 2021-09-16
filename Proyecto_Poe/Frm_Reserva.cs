@@ -18,6 +18,7 @@ namespace Proyecto_Poe
         public Frm_Reserva()
         {
             InitializeComponent();
+            dateReserva.MinDate = DateTime.Now;
         }
 
         private void txtNombreReserva_KeyPress(object sender, KeyPressEventArgs e)
